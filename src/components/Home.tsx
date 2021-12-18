@@ -40,36 +40,43 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export const Home: React.VFC = () => {
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" gutterBottom component="div">
-        作ったゲームやライブラリ
-      </Typography>
+    <>
       <Box
-        sx={{
-          backgroundColor: '#F3F6F9',
-          padding: '16px',
-        }}
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: 'background.paper', p: 3 }}
       >
-        <Typography gutterBottom variant="h4" component="div">
-          Games
+        <Typography variant="h4" gutterBottom component="div" align="center">
+          作ったゲームやライブラリ
         </Typography>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          <Grid item xs={2} sm={4} md={4}>
-            <BasicCard
-              title={'Mahjongg Solitaire'}
-              description={
-                '積み上げられた麻雀牌の山から、ある一定のルールに従って牌を取り除いていく、パズルゲーム。'
-              }
-              href={'https://mystifying-leakey-44c457.netlify.app/'}
-              path={'/mahjongg-solitaire'}
-            />
-          </Grid>
-        </Grid>
       </Box>
-    </Container>
+      <Box component="main" sx={{ flexGrow: 1, bgcolor: '#fafafa', p: 3 }}>
+        <Box
+          sx={{
+            padding: '16px',
+          }}
+        >
+          <Typography gutterBottom variant="h4" component="div">
+            Games
+          </Typography>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+          >
+            <Grid item xs={2} sm={4} md={4}>
+              <BasicCard
+                title={'Mahjongg Solitaire'}
+                description={
+                  '積み上げられた麻雀牌の山から、ある一定のルールに従って牌を取り除いていく、パズルゲーム。'
+                }
+                href={'https://mystifying-leakey-44c457.netlify.app/'}
+                path={'/mahjongg-solitaire'}
+              />
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      <Container maxWidth="sm"></Container>
+    </>
   );
 };

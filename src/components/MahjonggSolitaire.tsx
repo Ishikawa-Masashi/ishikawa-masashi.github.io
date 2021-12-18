@@ -12,20 +12,39 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { BasicCard } from './BasicCard';
+import { ReferenceCard } from './elements/ReferenceCard';
+import { ButtonBases } from './elements/ImageButton';
 
 export const MahjonggSolitaire: React.VFC = () => {
   return (
-    <Container maxWidth="sm">
-      <Typography gutterBottom variant="h4" component="div">
+    <Box
+      component="main"
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', p: 3 }}
+    >
+      <Typography gutterBottom variant="h4" component="div" align="center">
         Mahjongg Solitaire
       </Typography>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        // minHeight="100vh"
       >
-        <Grid item xs={2} sm={4} md={4}></Grid>
-      </Grid>
-    </Container>
+        <ReferenceCard
+          image={'/images/MahjonggSolitaire.png'}
+          url={'https://mystifying-leakey-44c457.netlify.app/'}
+        />
+      </Box>
+
+      <Box sx={{ p: 4 }}>
+        <Typography gutterBottom variant="h4" component="div">
+          遊び方
+        </Typography>
+        <Typography gutterBottom variant="body1" component="div">
+          同じ牌をタッチして2個1組で消していく。ただし、左右に牌がある牌と、牌の下にある牌は消去できない。
+        </Typography>
+      </Box>
+    </Box>
   );
 };

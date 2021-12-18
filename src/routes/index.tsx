@@ -78,17 +78,17 @@ const App: React.VFC = () => {
   );
 
   const createSubListItem = (name: string, path: string, index: number) => (
-    <ListItemButton sx={{ pl: 4 }}>
+    <ListItemButton
+      sx={{ pl: 4 }}
+      onClick={() => {
+        navigate(path);
+        handleListItemClick(event, index);
+      }}
+    >
       <ListItemIcon>
         <StarBorder />
       </ListItemIcon>
-      <ListItemText
-        primary={name}
-        onClick={() => {
-          navigate(path);
-          handleListItemClick(event, index);
-        }}
-      />
+      <ListItemText primary={name} />
     </ListItemButton>
   );
 
@@ -146,10 +146,7 @@ const App: React.VFC = () => {
           </Collapse>
         </List>
       </Drawer>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-      >
+      <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default' }}>
         <Toolbar />
         <Outlet />
       </Box>
