@@ -1,0 +1,91 @@
+// var React = require("react/addons");
+import React from 'react';
+import {
+  cloneElement,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import MenuBarEvents from './MenuBarEvents';
+
+// var MenuBarEvents = require("./MenuBarEvents");
+// var cloneWithProps = React.addons.cloneWithProps;
+
+type Props = { onSelect: (command: string) => void; children: ReactNode };
+
+// type State = { events?: MenuBarEvents; isActive: boolean };
+
+export default function MenuBar(props: Props) {
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isActive, setIsActive] = useState(false);
+  // const prevIsActive = usePrevious(isActive);
+  const [events] = useState(new MenuBarEvents());
+
+  useEffect(() => {
+    return () => {};
+  }, []);
+
+  const handleDocumentClick = useCallback(() => {
+    setIsActive(false);
+    // ev.stopPropagation();
+  }, [setIsActive]);
+
+  const bindSetInactiveHandler = () => {
+    document.addEventListener('click', handleDocumentClick);
+  };
+
+  const unbindSetInactiveHandler = () => {
+    document.removeEventListener('click', handleDocumentClick, false);
+  };
+  useEffect(() => {
+    if (isActive) {
+      bindSetInactiveHandler();
+      return;
+    }
+    unbindSetInactiveHandler();
+    return () => {};
+  }, [isActive]);
+
+  const isMenuBarDescendant = (element: HTMLElement) => {
+    // return this.getDOMNode().contains(element);
+    return elementRef.current?.contains(element);
+  };
+
+  const renderMenuItem = (child: ReactElement) => {
+    return cloneElement(child, {
+      isMenuBarActive: isActive,
+      isMenuBarDescendant: isMenuBarDescendant,
+      isTopLevel: true,
+      menuBarEvents: events,
+      onSelect: props.onSelect,
+    });
+  };
+
+  // const handleDocumentClick = (e: any) => {
+  //   // this.setState({ isActive: false });
+  //   setIsActive(false);
+  // };
+
+  const onClick = (e: React.MouseEvent) => {
+    // this.setState({ isActive: !this.state.isActive });
+    setIsActive(!isActive);
+  };
+
+  const onMouseOver = (e: React.MouseEvent) => {
+    events.emitMouseOver(e);
+  };
+
+  return (
+    <div
+      className="menu-bar--dark"
+      onClick={onClick}
+      onMouseOver={onMouseOver}
+      ref={elementRef}
+    >
+      {React.Children.map(props.children as ReactElement, renderMenuItem)}
+    </div>
+  );
+}

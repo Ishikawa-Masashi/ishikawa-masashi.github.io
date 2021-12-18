@@ -1,0 +1,12 @@
+.react-menu-item {
+  border: thin solid transparent;
+
+  &.dropdown-submenu {
+    // height: 1.8em;
+
+    & > .submenu-label {
+      height: 1.8em;
+      padding: 0;
+    }
+  }
+}
