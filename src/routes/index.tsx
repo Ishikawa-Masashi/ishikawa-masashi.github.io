@@ -13,14 +13,17 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 import ListSubheader from '@mui/material/ListSubheader';
 import ListItemButton from '@mui/material/ListItemButton';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import HomeIcon from '@mui/icons-material/Home';
 
 import { Home } from '../components/Home';
+import { MahjonggSolitaire } from '../components/MahjonggSolitaire';
 
 const drawerWidth = 240;
 
@@ -39,6 +42,7 @@ const App: React.VFC = () => {
     {
       name: 'Home',
       path: '/',
+      icon: <HomeIcon />,
       index: 0,
     },
   ];
@@ -46,14 +50,19 @@ const App: React.VFC = () => {
   const gamePages = [
     {
       name: 'Mahjongg Solitaire',
-      path: '/cubes-with-vertex-arrays',
+      path: '/mahjongg-solitaire',
       index: 0,
     },
   ];
 
   const navigate = useNavigate();
 
-  const createListItem = (name: string, path: string, index: number) => (
+  const createListItem = (
+    name: string,
+    path: string,
+    icon: JSX.Element,
+    index: number
+  ) => (
     <ListItem
       button
       key={name}
@@ -63,9 +72,7 @@ const App: React.VFC = () => {
         handleListItemClick(event, index);
       }}
     >
-      <ListItemIcon>
-        {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-      </ListItemIcon>
+      <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText primary={name} />
     </ListItem>
   );
@@ -117,7 +124,7 @@ const App: React.VFC = () => {
             Index
           </ListSubheader>
           {homePages.map((page, index) =>
-            createListItem(page.name, page.path, index)
+            createListItem(page.name, page.path, page.icon, index)
           )}
         </List>
         {/* <Divider /> */}
@@ -127,7 +134,7 @@ const App: React.VFC = () => {
           </ListSubheader> */}
           <ListItemButton onClick={handleClick}>
             <ListItemIcon>
-              <InboxIcon />
+              <VideogameAssetIcon />
             </ListItemIcon>
             <ListItemText primary="Games" />
             {open ? <ExpandLess /> : <ExpandMore />}
@@ -171,6 +178,7 @@ export const rootPath = [
       //   },
       //   { path: '/', element: <Navigate to="/stocks" /> },
       { path: '/', element: <Home /> },
+      { path: '/mahjongg-solitaire', element: <MahjonggSolitaire /> },
     ],
   },
   //   { path: '/about', element: <About /> },

@@ -27,7 +27,7 @@ export const Home: React.VFC = () => {
         {Array.from(Array(6)).map((_, index) => (
           <Grid item xs={2} sm={4} md={4} key={index}>
             {/* <Item> */}
-            <BasicCard title={''} />
+            <BasicCard title={''} description={''} />
             {/* </Item> */}
           </Grid>
         ))}
