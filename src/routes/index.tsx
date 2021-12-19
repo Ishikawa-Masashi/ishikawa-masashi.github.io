@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, Outlet, useRoutes } from 'react-router-dom';
+import { useNavigate, Outlet, useRoutes, useLocation } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -30,20 +30,22 @@ const drawerWidth = 240;
 const App: React.VFC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [open, setOpen] = React.useState(true);
+  const location = useLocation();
+
+  console.log(location);
 
   const handleClick = () => {
     setOpen(!open);
   };
-  const handleListItemClick = (event: any, index: number) => {
-    setSelectedIndex(index);
-  };
+  // const handleListItemClick = (event: any, index: number) => {
+  //   setSelectedIndex(index);
+  // };
 
   const homePages = [
     {
       name: 'Home',
       path: '/',
       icon: <HomeIcon />,
-      index: 0,
     },
   ];
 
@@ -51,25 +53,19 @@ const App: React.VFC = () => {
     {
       name: 'Mahjongg Solitaire',
       path: '/mahjongg-solitaire',
-      index: 0,
     },
   ];
 
   const navigate = useNavigate();
 
-  const createListItem = (
-    name: string,
-    path: string,
-    icon: JSX.Element,
-    index: number
-  ) => (
+  const createListItem = (name: string, path: string, icon: JSX.Element) => (
     <ListItem
       button
       key={name}
-      selected={index === selectedIndex}
+      selected={path === location.pathname}
       onClick={(event) => {
         navigate(path);
-        handleListItemClick(event, index);
+        // handleListItemClick(event, index);
       }}
     >
       <ListItemIcon>{icon}</ListItemIcon>
@@ -77,13 +73,15 @@ const App: React.VFC = () => {
     </ListItem>
   );
 
-  const createSubListItem = (name: string, path: string, index: number) => (
+  const createSubListItem = (name: string, path: string) => (
     <ListItemButton
       sx={{ pl: 4 }}
       onClick={() => {
         navigate(path);
-        handleListItemClick(event, index);
+        // handleListItemClick(event, index);
       }}
+      selected={path === location.pathname}
+      key={name}
     >
       <ListItemIcon>
         <StarBorder />
@@ -123,8 +121,8 @@ const App: React.VFC = () => {
           <ListSubheader component="div" id="nested-list-subheader">
             Index
           </ListSubheader>
-          {homePages.map((page, index) =>
-            createListItem(page.name, page.path, page.icon, index)
+          {homePages.map((page) =>
+            createListItem(page.name, page.path, page.icon)
           )}
         </List>
         {/* <Divider /> */}
@@ -141,7 +139,7 @@ const App: React.VFC = () => {
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             {gamePages.map((page, index) =>
-              createSubListItem(page.name, page.path, index + homePages.length)
+              createSubListItem(page.name, page.path)
             )}
           </Collapse>
         </List>

@@ -12,8 +12,8 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { BasicCard } from './BasicCard';
-import { ReferenceCard } from './elements/ReferenceCard';
-import { ButtonBases } from './elements/ImageButton';
+import { ReferenceCard } from './Elements/ReferenceCard';
+import { ButtonBases } from './Elements/ImageButton';
 
 export const MahjonggSolitaire: React.VFC = () => {
   return (
@@ -25,12 +25,7 @@ export const MahjonggSolitaire: React.VFC = () => {
         Mahjongg Solitaire
       </Typography>
 
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        // minHeight="100vh"
-      >
+      <Box display="flex" justifyContent="center" alignItems="center">
         <ReferenceCard
           image={'/images/MahjonggSolitaire.png'}
           url={'https://mystifying-leakey-44c457.netlify.app/'}
