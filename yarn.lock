@@ -440,10 +440,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ishikawa-masashi/react-katex@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@ishikawa-masashi/react-katex/0.0.6/281abbd817a3726609a82ae05ad75f9ffc50751825b38abbcbae02d2d3df4761#c2f9e5f09ed774c9153854a07df05b36b2715dd4"
-  integrity sha512-+2H599JcunBm9kUtNggp3dIlb/pePbeu2CFFaRKw1RYlBYe/yDLY2Ds2sD2QJq1hEBDQk2OBPyzSELoqvWSmyQ==
+"@ishikawa-masashi/react-katex@^0.0.9":
+  version "0.0.9"
+  resolved "https://npm.pkg.github.com/download/@ishikawa-masashi/react-katex/0.0.9/a138a1ad14f5b97dc9f7b095b1178e506390f4a44f6f12c8e769e84dbfcc2da4#dc6750514c685218c420677f2b6b595ea0ec692c"
+  integrity sha512-RfDeze4kg79oomWTGGSmM0WwsyucA3h5nnFLo0gwpI/xInmrMcxFA22mEeP5AiRj32cu5dzkB9fTteq1fvhmlQ==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"
@@ -2068,7 +2068,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@*, classnames@^2.3.1:
+classnames@*:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
