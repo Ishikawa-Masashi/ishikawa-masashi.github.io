@@ -1,5 +1,4 @@
-import * as React from 'react';
-// import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import { MenubarExample } from './MenubarExample';

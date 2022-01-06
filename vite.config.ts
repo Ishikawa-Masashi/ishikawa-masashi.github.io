@@ -54,7 +54,7 @@ export default defineConfig({
      *   https://vitejs.bootcss.com/config/#build-rollupoptions
      */
     rollupOptions: {
-      // external: ['react', 'react-dom'],
+      external: ['react', 'react-dom'],
     },
   },
 });

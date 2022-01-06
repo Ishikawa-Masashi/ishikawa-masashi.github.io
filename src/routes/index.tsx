@@ -24,15 +24,17 @@ import HomeIcon from '@mui/icons-material/Home';
 
 import { Home } from '../components/Home';
 import { MahjonggSolitaire } from '../components/MahjonggSolitaire';
+import { ConversionEulerToMatrix } from '../components/Articles/ConversionEulerToMatrix';
 
 const drawerWidth = 240;
 
 const App: React.VFC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [open, setOpen] = React.useState(true);
+  const [openGamePages, setOpenGamePages] = React.useState(true);
   const location = useLocation();
 
-  console.log(location);
+  // console.log(location);
 
   const handleClick = () => {
     setOpen(!open);
@@ -53,6 +55,13 @@ const App: React.VFC = () => {
     {
       name: 'Mahjongg Solitaire',
       path: '/mahjongg-solitaire',
+    },
+  ];
+
+  const articlePages = [
+    {
+      name: 'オイラー角と行列',
+      path: '/articles/conversion-euler-to-matrix',
     },
   ];
 
@@ -127,18 +136,29 @@ const App: React.VFC = () => {
         </List>
         {/* <Divider /> */}
         <List>
-          {/* <ListSubheader component="div" id="nested-list-subheader">
-            Games
-          </ListSubheader> */}
-          <ListItemButton onClick={handleClick}>
+          <ListItemButton onClick={() => setOpenGamePages(!openGamePages)}>
             <ListItemIcon>
               <VideogameAssetIcon />
             </ListItemIcon>
             <ListItemText primary="Games" />
+            {openGamePages ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={openGamePages} timeout="auto" unmountOnExit>
+            {gamePages.map((page, index) =>
+              createSubListItem(page.name, page.path)
+            )}
+          </Collapse>
+        </List>
+        <List>
+          <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <VideogameAssetIcon />
+            </ListItemIcon>
+            <ListItemText primary="記事" />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            {gamePages.map((page, index) =>
+            {articlePages.map((page, index) =>
               createSubListItem(page.name, page.path)
             )}
           </Collapse>
@@ -163,16 +183,22 @@ export const rootPath = [
     path: '/',
     element: <App />,
     children: [
-      //   {
-      //     path: 'stocks/*',
-      //     element: <Stock />,
-      //     children: [
-      //       { path: '/:id', element: <StockDetail /> },
-      //       { path: '/', element: <StockList /> },
-      //     ],
-      //   },
+      {
+        // path: 'articles/*',
+        // element: <div />,
+        // element: <Stock />,
+        // element: <ConversionEulerToMatrix />,
+        children: [
+          // { path: '/:id', element: <StockDetail /> },
+          {
+            path: 'articles/conversion-euler-to-matrix',
+            element: <ConversionEulerToMatrix />,
+          },
+        ],
+      },
       //   { path: '/', element: <Navigate to="/stocks" /> },
       { path: '/', element: <Home /> },
+      { path: '/mahjongg-solitaire', element: <MahjonggSolitaire /> },
       { path: '/mahjongg-solitaire', element: <MahjonggSolitaire /> },
     ],
   },
