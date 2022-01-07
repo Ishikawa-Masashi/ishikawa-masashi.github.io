@@ -1,11 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import { CardActionArea } from '@mui/material';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material';
 import Paper from '@mui/material/Paper';
@@ -49,15 +43,25 @@ export const ConversionEulerToMatrix: React.VFC = () => {
           遊び方
         </Typography>
         <TeX block>{_`
-R^{left}_x = 
+          R^{left}_x = 
+            \left(
+              \begin{array}{ccc}
+                1 & 0 & 0 \\
+                0 & \cos \theta & - \sin \theta \\
+                0 & \sin \theta & \cos \theta
+              \end{array}
+            \right)
+        `}</TeX>
+        <TeX block>{_`
+R^{left}_y = 
 \left(
   \begin{array}{ccc}
-    1 & 0 & 0 \\
-    0 & \cos \theta & - \sin \theta \\
-    0 & \sin \theta & \cos \theta
+    \cos \theta & 0 & \sin \theta \\
+    0 & 1 & 0 \\
+    -\sin \theta & 0 & \cos \theta
   \end{array}
 \right)
-      `}</TeX>
+        `}</TeX>
         <Typography gutterBottom variant="body1" component="div">
           同じ牌をタッチして2個1組で消していく。ただし、左右に牌がある牌と、牌の下にある牌は消去できない。
         </Typography>

@@ -440,10 +440,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ishikawa-masashi/react-katex@^0.0.9":
-  version "0.0.9"
-  resolved "https://npm.pkg.github.com/download/@ishikawa-masashi/react-katex/0.0.9/a138a1ad14f5b97dc9f7b095b1178e506390f4a44f6f12c8e769e84dbfcc2da4#dc6750514c685218c420677f2b6b595ea0ec692c"
-  integrity sha512-RfDeze4kg79oomWTGGSmM0WwsyucA3h5nnFLo0gwpI/xInmrMcxFA22mEeP5AiRj32cu5dzkB9fTteq1fvhmlQ==
+"@ishikawa-masashi/react-katex@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@ishikawa-masashi/react-katex/0.1.0/ddb9dc51ab9de5047a57d0684f78c0e0b764c93f3b1f4f84d57063101bb88609#7d8b6c719f0a5e7a38b472bd8293158ef66290dd"
+  integrity sha512-kPwjV3Ww+et1At5M9BaOUkByyFuqbz2Tq96dIbJsZ6N92eNm6s3FInRIIgzLDOKLvQSyNiaAGPVk1JnTKu5GmA==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"
