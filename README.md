@@ -1,63 +1,51 @@
-# react-menu-bar
+# About
 
-Menu bar component for [React][1].
+<a href="https://github.com/HiChen404/MyWikiSite">
+<img alt="github" class="Badges" src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/>
+</a> <a href="https://404Lab.top">
+<img alt="404lab" class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051019063.svg"/>
+</a> <a href="https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw">
+<img alt="404lab" class="Badges" src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-38,506%E4%BA%BA-blue/?labelColor=f5f5f5&logo=wechat"/>
+</a> <a href="https://www.zhihu.com/people/li-kang-ning">
 
-## Installation
+ <img alt="404lab" class="Badges" src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E%E6%94%B6%E8%97%8F-54,547%E6%AC%A1-blue/?logo=zhihu&labelColor=e6f7ff&color=blue"/>
 
-```sh
-npm install --save react-menu-bar
-```
+</a>
 
-## Usage
+<br/>
+<br/>
 
-```js
-var { MenuBar, MenuItem, Menu, Separator } = require("react-menu-bar");
+> 🚀**本文档持续更新中...**
 
-var MyMenuBar = React.createClass({
-  render: function() {
-    return (
-      <MenuBar onSelect={this.onSelect}>
-        <MenuItem label="File">
-          <Menu>
-            <MenuItem command="new-window">New Window</MenuItem>
-            <MenuItem command="new-file">New File</MenuItem>
-          </Menu>
-        </MenuItem>
+## Biography
 
-        <MenuItem label="Edit">
-          <Menu>
-            <MenuItem command="undo">Undo</MenuItem>
-            <MenuItem command="redo">Redo</MenuItem>
-            <Separator />
-            <MenuItem label="Find">
-              <Menu>
-                <MenuItem command="find">Find…</MenuItem>
-                <MenuItem command="find-next">Find Next</MenuItem>
-                <MenuItem command="find-previous">Find Previous</MenuItem>
-                <MenuItem command="use-selection-for-find">
-                  Use Selection For Find
-                </MenuItem>
-              </Menu>
-            </MenuItem>
-          </Menu>
-        </MenuItem>
+Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
 
-        <MenuItem label="Help">
-          <Menu>
-            <MenuItem command="terms-of-use">Terms of Use</MenuItem>
-            <MenuItem command="documentation">Documentation</MenuItem>
-            <Separator />
-            <MenuItem command="release-notes">Release Notes</MenuItem>
-          </Menu>
-        </MenuItem>
-      </MenuBar>
-    );
-  },
+This is a shared knowledge base and we look forward to working together to<br/>
 
-  onSelect: function(command) {
-    console.log("Selected: %s", command);
-  }
-});
-```
+complete this knowledge base!
 
-[1]: https://facebook.github.io/react/
+You can also visit this website: [ZWS](https://zws.404lab.top) to shorten your url with invisible spaces.
+
+Hava fun!
+
+## Contact
+
+ <a href="mailto:Hi@404Lab.top">
+<img class="Badges" alt="404lab" src="https://img.shields.io/badge/Email-Hi%40404Lab.top-blue/?logo=Mail.Ru&color=13c2c2&labelColor=f5f5f5&logoColor=blue"/>
+</a>
+
+Contact me by:
+
+- 公众号 : [404Lab](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png)
+- Telegram: [Telegram Channel](https://t.me/EnjoyDigitalLife)
+- Email: [Hi@404Lab.top](mailto:Hi@404Lab.top)
+- 知乎: [@404Lab](https://www.zhihu.com/people/li-kang-ning)
+- Blog: [404Lab.top](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw)
+
+<!-- ![](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051029424.jpeg) -->
+<img class="Badges" alt="404lab" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png" width="50%"/>
+
+## Website
+
+This website is built using Docusaurus 2, a modern static website generator.
