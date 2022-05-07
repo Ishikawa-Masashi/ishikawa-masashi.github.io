@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>数字生活 DigitalLife Blog</title>
+        <link>https://wiki.404Lab.top/blog</link>
+        <description>数字生活 DigitalLife Blog</description>
+        <lastBuildDate>Fri, 25 Mar 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-cn</language>
+        <item>
+            <title><![CDATA[Daily 3/25/2022]]></title>
+            <link>https://wiki.404Lab.top/blog/Daily 3/25/2022</link>
+            <guid>Daily 3/25/2022</guid>
+            <pubDate>Fri, 25 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[跟随 Youtuber 练习了几个 App Demo,先放一个截图看看吧:]]></description>
+            <content:encoded><![CDATA[<p>跟随 Youtuber 练习了几个 App Demo,先放一个截图看看吧:</p><img loading="lazy" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/25-19-00-53-Details.png" style="width:33%" class="img_E7b_"><p>最近使用了 Expo 开发 React Native 应用，体验非常不错 !</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Welcome!]]></title>
+            <link>https://wiki.404Lab.top/blog/welcome</link>
+            <guid>welcome</guid>
+            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

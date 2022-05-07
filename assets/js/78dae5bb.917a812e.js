@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[3986],{8387:function(e){e.exports=JSON.parse('{"label":"CSS","permalink":"/tags/css","allTagsPath":"/tags","count":1,"items":[{"id":"Notes/CSS Learnning","title":"CSS \u5b66\u4e60\u7b14\u8bb0","description":"CSS \u5b66\u4e60\u7b14\u8bb0","permalink":"/Notes/CSS Learnning"}]}')}}]);

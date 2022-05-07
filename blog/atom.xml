@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wiki.404Lab.top/blog</id>
+    <title>数字生活 DigitalLife Blog</title>
+    <updated>2022-03-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wiki.404Lab.top/blog"/>
+    <subtitle>数字生活 DigitalLife Blog</subtitle>
+    <icon>https://wiki.404Lab.top/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Daily 3/25/2022]]></title>
+        <id>Daily 3/25/2022</id>
+        <link href="https://wiki.404Lab.top/blog/Daily 3/25/2022"/>
+        <updated>2022-03-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[跟随 Youtuber 练习了几个 App Demo,先放一个截图看看吧:]]></summary>
+        <content type="html"><![CDATA[<p>跟随 Youtuber 练习了几个 App Demo,先放一个截图看看吧:</p><img loading="lazy" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/25-19-00-53-Details.png" style="width:33%" class="img_E7b_"><p>最近使用了 Expo 开发 React Native 应用，体验非常不错 !</p>]]></content>
+        <author>
+            <name>Chen Chen</name>
+            <uri>https://wiki.404lab.top</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome!]]></title>
+        <id>welcome</id>
+        <link href="https://wiki.404Lab.top/blog/welcome"/>
+        <updated>2021-08-26T00:00:00.000Z</updated>
+        <author>
+            <name>Chen Chen</name>
+            <uri>https://wiki.404lab.top</uri>
+        </author>
+    </entry>
+</feed>
