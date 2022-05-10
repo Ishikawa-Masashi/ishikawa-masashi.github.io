@@ -21,7 +21,7 @@ keywords:
     iPhone,
   ]
 slug: /
-title: ISHIKAWA MASASHI
+title: ishikawa-masashi.github.io
 ---
 
 import { Highlight } from "../src/components/MyMDX"

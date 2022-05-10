@@ -34,7 +34,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 html {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "UD デジタル 教科書体 N-R", "Noto Sans", sans-serif;
   font-style: normal;
 }
 
@@ -92,7 +92,11 @@ blockquote {
 }
 blockquote:hover {
   /* border-left: 2px solid var(--ifm-color-primary); */
-  border-image-source: linear-gradient(to left, #8f41e9, var(--ifm-color-primary));
+  border-image-source: linear-gradient(
+    to left,
+    #8f41e9,
+    var(--ifm-color-primary)
+  );
   border-image-slice: 1;
   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0);
 }
