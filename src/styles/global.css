@@ -1,0 +1,21 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown ol {
+  @apply list-decimal pl-10;
+}
+.markdown ul {
+  @apply list-disc pl-10;
+}
+.markdown h4 {
+  @apply text-lg border-b border-black my-5;
+}
+
+.markdown h2 {
+  @apply border-red-500 border-l-4 text-2xl;
+}
+.markdown ul {
+  @apply list-disc pl-10;
+}
