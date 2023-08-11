@@ -16,7 +16,8 @@ const PostList: React.FC<Props> = ({ postFields }) => {
   })
 
   return (
-    <div css={styles.content}>
+    // <div css={styles.content} className="container mx-auto pt-2">
+    <div className="container mx-auto pt-2">
       <div css={styles.content_inner}>
         {filtered.map((postField) => (
           <PostPreview key={postField.frontmatter.slug} postField={postField} />

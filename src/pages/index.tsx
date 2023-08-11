@@ -74,6 +74,12 @@ const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
 
       <GameList postFields={gameFields} />
 
+      <div className="container mx-auto border-b-2 border-dashed border-blue-600 ">
+        <div className="flex fill-blue-600 py-2">
+          <ChevronCircleRight />
+          <div className="px-2 text-3xl text-blue-600">ブログ</div>
+        </div>
+      </div>
       <PostList postFields={postFields} />
       <TagList tagCounts={tagCounts} />
     </>

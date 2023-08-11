@@ -34,7 +34,7 @@ const Footer: React.FC<Props> = ({ isRoot }) => {
 
           <div css="copyright">
             Copyright © 2018. {config.blogAuthor}
-            <a aria-label="blog_repository" href={config.blogRepositoryUrl} rel="noopener noreferrer" css={styles.github_icon} />
+            <a aria-label="blog_repository" href={config.repositoryUrl} rel="noopener noreferrer" css={styles.github_icon} />
           </div>
         </div>
       </BackgroundImage>

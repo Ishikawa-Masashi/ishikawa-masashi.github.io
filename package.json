@@ -1,8 +1,8 @@
 {
   "name": "blog",
-  "description": "Takumon Blog",
+  "description": "Masashi Ishikawa's portfolio",
   "version": "1.0.0",
-  "author": "Ishikawa Masashi <inouetakumon@gmail.com>",
+  "author": "Ishikawa Masashi <Ishikawa-Masashi@outlook.jp>",
   "bugs": {
     "url": "https://github.com/takumon/blog/issues"
   },

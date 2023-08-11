@@ -13,7 +13,8 @@ type Props = {
 
 const TagList: React.FC<Props> = ({ tagCounts }) => {
   return (
-    <div css={styles.content}>
+    // <div css={styles.content}>
+    <div className="container m-auto mb-2">
       <h3 css={styles.title}>
         <FontAwesomeIcon icon={faTags} css={styles.title__icon} />
         タグ一覧

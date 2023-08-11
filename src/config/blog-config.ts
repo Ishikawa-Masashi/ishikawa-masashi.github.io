@@ -9,6 +9,7 @@ const config = {
   thumbnailImagePathForRootPage: 'thumbnail/for-root-page.png',
   blogAuthorTwitterUserName: 'inouetakumon',
   blogRepositoryUrl: 'https://github.com/Takumon/blog',
+  repositoryUrl: 'https://github.com/Ishikawa-Masashi/ishikawa-masashi.github.io',
   blogAuthorTwitterUrl: 'https://twitter.com/inouetakumon',
   blogAuthorQiitaUrl: 'https://qiita.com/Takumon',
   blogAuthorGitHubUrl: 'https://github.com/Ishikawa-Masashi',
