@@ -10,6 +10,7 @@ import { TagCounts } from 'index'
 import { GameList } from '../components/GameList'
 import { ChevronCircleRight } from '../icons/ChevronCircleRight'
 import { SoftwareList } from '../components/SoftwareList'
+import { NoteList } from '../components/NoteList'
 
 const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
   // マージして降順で並び替え
@@ -44,6 +45,7 @@ const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
   const postFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'blog').map((post) => post.node), [posts])
   const gameFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'game').map((post) => post.node), [posts])
   const softwareFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'software').map((post) => post.node), [posts])
+  const notes = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'note').map((post) => post.node), [posts])
 
   return (
     <>
@@ -66,14 +68,6 @@ const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
       </div>
 
       <SoftwareList postFields={softwareFields} />
-      <div className="container mx-auto border-b-2 border-dashed border-blue-600 ">
-        <div className="flex fill-blue-600 py-2">
-          <ChevronCircleRight />
-          <div className="px-2 text-3xl text-blue-600">ノート</div>
-        </div>
-      </div>
-
-      <GameList postFields={gameFields} />
 
       <div className="container mx-auto border-b-2 border-dashed border-blue-600 ">
         <div className="flex fill-blue-600 py-2">
@@ -82,6 +76,16 @@ const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
         </div>
       </div>
       <PostList postFields={postFields} />
+
+      <div className="container mx-auto border-b-2 border-dashed border-blue-600 ">
+        <div className="flex fill-blue-600 py-2">
+          <ChevronCircleRight />
+          <div className="px-2 text-3xl text-blue-600">ノート</div>
+        </div>
+      </div>
+
+      <NoteList postFields={notes} />
+
       <TagList tagCounts={tagCounts} />
     </>
   )

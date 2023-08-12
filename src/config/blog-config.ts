@@ -1,8 +1,10 @@
 const config = {
   blogTitle: `Masashi Ishikawa's portfolio`,
   title: `Masashi Ishikawa's portfolio`,
-  blogDescription: `SIer's tech blog powered by Gatsby`,
+  // blogDescription: `SIer's tech blog powered by Gatsby`,
+  blogDescription: `Powered by Gatsby`,
   blogUrl: 'https://takumon.com',
+  url: 'https://ishikawa-masashi.github.io',
   blogRssUrl: 'https://takumon.com/rss.xml',
   blogImageUrl: 'https://takumon.com/icons/app-sns.png', // gatsby-image経由ではない場合
   defaultThumbnailImagePath: 'thumbnail/default.png', // 記事にサムネイルが指定していない場合のデフォルトサムネイル画像の相対パス

@@ -30,7 +30,8 @@ type Props = {
 const Post: React.FC<Props> = ({ item, headings, pageContext: { previous, next, slug, relatedPosts, latestPosts, thumbnail }, siteTitle }) => {
   const isShowSnsShare = useIsScrollDownTo(400)
 
-  const postUrl = `${config.blogUrl}${slug}`
+  // const postUrl = `${config.blogUrl}${slug}`
+  const postUrl = `${config.url}${slug}`
 
   const cssSnsShare = useMemo(() => {
     return [styles.sns_share, isShowSnsShare ? styles.sns_share_show : styles.sns_share_hide]

@@ -8,7 +8,7 @@ tags:
   - 作業効率化
 keywords:
   - キーボード
-slug: /autohotkey-mouse-scroll-combination2
+slug: /mahjong-solitaire
 thumbnail: thumbnail/shanghai.png
 url: 'https://bejewelled-gumdrop-25bb0a.netlify.app/'
 ---
