@@ -5,6 +5,7 @@ tags:
   - Gatsby
 keywords:
   - Gatsby
+category: blog
 slug: /migrate-gatsby-v2-to-v5
 thumbnail: thumbnail/2023/04/migrate-gatsby-v2-to-v5.png
 ---

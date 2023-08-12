@@ -40,7 +40,8 @@ const IndexPage: React.FC<PageProps<GatsbyTypes.Query>> = ({ data }) => {
     return _orderBy(_result, ['size', 'text'], ['desc', 'asc'])
   }, [posts])
 
-  const postFields = useMemo(() => posts.map((post) => post.node), [posts])
+  // const postFields = useMemo(() => posts.map((post) => post.node), [posts])
+  const postFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'blog').map((post) => post.node), [posts])
   const gameFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'game').map((post) => post.node), [posts])
   const softwareFields = useMemo(() => posts.filter((post) => post.node.frontmatter.category === 'software').map((post) => post.node), [posts])
 

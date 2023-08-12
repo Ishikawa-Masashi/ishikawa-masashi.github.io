@@ -1,6 +1,7 @@
 import React from 'react'
 import { css, keyframes } from '@emotion/react'
-import PostPreview from './PostPreview'
+// import PostPreview from './PostPreview'
+import { PostPreview } from './PostPreview2'
 import usePaging from '../hooks/usePaging'
 
 const PER_PAGE = 15

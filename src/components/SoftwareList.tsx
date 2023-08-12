@@ -1,8 +1,7 @@
 import React from 'react'
 import { css, keyframes } from '@emotion/react'
 import usePaging from '../hooks/usePaging'
-import { GamePostPreview } from './GamePostPreview'
-import { PostPreview } from './PostPreview2'
+import { SoftwareArticlePreview } from './SoftwareArticlePreview'
 
 const PER_PAGE = 15
 
@@ -27,7 +26,7 @@ export const SoftwareList = ({ postFields }: Props) => {
       <div className="flex flex-wrap gap-3 pt-6">
         {filtered.map((postField) => (
           // <GamePostPreview key={postField.frontmatter.slug} postField={postField} />
-          <PostPreview key={postField.frontmatter.slug} postField={postField} />
+          <SoftwareArticlePreview key={postField.frontmatter.slug} postField={postField} />
         ))}
       </div>
       {hasNextPage ? (

@@ -1,102 +1,33 @@
 import React from 'react'
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import PostMetaInfo from './PostMetaInfo'
 import Image from './Thumbnail'
 // import { Image } from './Image'
 import config from '../config/blog-config'
+
+import Tag from './Tag'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { faTags, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+// import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
-const Card = styled.article`
-  border-bottom: 1px solid var(--cardBorder);
-  border-radius: 4px;
-  box-shadow: var(--cardBS);
-  padding: 0.75rem 1.75rem;
-  background-color: var(--bgLight);
-  max-width: 100%;
-
-  @media screen and (max-width: 400px) {
-    padding: 0.75rem 0.75rem;
-  }
-`
-
-const ImageWrapper = styled.div`
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-`
-
-const Title = styled.h2`
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  font-size: 16px;
-  border-bottom: 0;
-  word-break: break-all;
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  @media screen and (max-width: 400px) {
-    line-height: 1.1;
-  }
-`
-
-const Description = styled.p`
-  color: var(--text);
-  font-size: 12px;
-  word-break: break-all;
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-`
-
-const LinkCard = styled(Link)`
-  box-shadow: none;
-  color: var(--text);
-  font-size: 1.2em;
-  line-height: 1em;
-
-  &:hover {
-    box-shadow: none;
-    opacity: 1;
-    ${ImageWrapper} {
-      transform: scale(1.04);
-    }
-    ${Title},
-    ${Description} {
-      color: var(--textHover);
-    }
-  }
-  @media screen and (max-width: 400px) {
-    font-size: 0.8em;
-  }
-`
-
-const Body = styled.div`
-  display: table-cell;
-  vertical-align: middle;
-  height: 5rem;
-  padding: 0 0.5rem;
-
-  @media screen and (max-width: 400px) {
-    padding: 0 0.1rem;
-  }
-`
-
-const styles = {
-  image: css`
-    object-fit: contain;
-    width: 100%;
-    max-height: 230px;
-    height: 100%;
-    margin: 0;
-  `,
-}
+import moment from 'moment'
 
 type Props = {
   postField: GatsbyTypes.MarkdownRemark
 }
 
 export const PostPreview = ({ postField }: Props) => {
+  const formattedDate = React.useMemo(() => moment(postField.frontmatter.date).format(config.dateFormat), [postField])
+
+  const tagList = (postField.frontmatter.tags ?? []).map((tag) => <Tag key={tag} value={tag} />)
   return (
     <article className="group max-w-xs rounded-md px-3 py-7 shadow-md" key={postField.frontmatter.slug}>
       <Link to={postField.frontmatter.slug} className="group">
-        <div className="relative mb-3 transition-all">
+        <div className="relative mb-3 flex transition-all">
+          <FontAwesomeIcon icon={faCalendarAlt} size="sm" />
+          <h2>{formattedDate}</h2>
+
           {/* <ImageWrapper>
             <Image css={styles.image} filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} />
           </ImageWrapper> */}
@@ -106,19 +37,19 @@ export const PostPreview = ({ postField }: Props) => {
               <div className="px-2">Run Game</div>
             </div>
           </div> */}
-
-          <div className="transition-all group-hover:scale-110">
-            {/* <Image css={styles.image} filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} /> */}
-            <Image filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} />
-          </div>
         </div>
         {/* </Link> */}
 
         {/* <Link to={postField.frontmatter.slug}> */}
         <div className="px-2">
-          <h2 className="mb-2 border-y-0 font-bold">{postField.frontmatter.title}</h2>
+          <h2 className="mb-2 truncate border-y-0 font-bold">{postField.frontmatter.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: postField.excerpt ?? '' }} />
-          <PostMetaInfo tags={postField.frontmatter.tags ?? []} date={postField.frontmatter.date} />
+
+          <div className="flex">
+            <FontAwesomeIcon icon={faTags} size="sm" />
+            {tagList}
+          </div>
+          {/* <PostMetaInfo tags={postField.frontmatter.tags ?? []} date={postField.frontmatter.date} /> */}
         </div>
       </Link>
     </article>
