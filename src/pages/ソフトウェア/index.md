@@ -9,7 +9,7 @@ tags:
 keywords:
   - キーボード
 slug: /autohotkey-mouse-scroll-combination
-thumbnail: thumbnail/2023/04/autohotkey-mouse-scroll-combination.png
+thumbnail: thumbnail/540px-Npm-logo.png
 url: https://takumon.com # WebサイトのURL
 ---
 

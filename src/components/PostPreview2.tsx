@@ -92,29 +92,29 @@ type Props = {
   postField: GatsbyTypes.MarkdownRemark
 }
 
-export const GamePostPreview = ({ postField }: Props) => {
+export const PostPreview = ({ postField }: Props) => {
   return (
     <article className="group max-w-xs rounded-md px-3 py-7 shadow-md" key={postField.frontmatter.slug}>
-      <Link to={postField.frontmatter.url as string} className="group">
-        <div className="relative transition-all ">
+      <Link to={postField.frontmatter.slug} className="group">
+        <div className="relative mb-3 transition-all">
           {/* <ImageWrapper>
             <Image css={styles.image} filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} />
           </ImageWrapper> */}
-          <div className="absolute z-20 flex h-full w-full items-center justify-center">
+          {/* <div className="absolute z-20 flex h-full w-full items-center justify-center">
             <div className="flex items-center bg-green-700 p-2 font-bold text-white">
               <FontAwesomeIcon icon={faPlayCircle} />
               <div className="px-2">Run Game</div>
             </div>
-          </div>
+          </div> */}
 
           <div className="transition-all group-hover:scale-110">
             {/* <Image css={styles.image} filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} /> */}
             <Image filename={postField.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} />
           </div>
         </div>
-      </Link>
+        {/* </Link> */}
 
-      <Link to={postField.frontmatter.slug}>
+        {/* <Link to={postField.frontmatter.slug}> */}
         <div className="px-2">
           <h2 className="mb-2 border-y-0">{postField.frontmatter.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: postField.excerpt ?? '' }} />
