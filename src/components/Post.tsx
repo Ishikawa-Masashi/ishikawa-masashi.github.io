@@ -70,10 +70,10 @@ const Post: React.FC<Props> = ({ item, headings, pageContext: { previous, next, 
       </div>
 
       <div css={styles.container}>
-        <div css={styles.post}>
-          <div>
+        <div css={styles.post} className="markdown">
+          {/* <div>
             <Image filename={item.frontmatter.thumbnail || config.defaultThumbnailImagePath} alt={'thumbnail'} />
-          </div>
+          </div> */}
           {/* TODO html型修正 */}
           <div dangerouslySetInnerHTML={{ __html: item.html ?? '' }} />
           {/* <div>

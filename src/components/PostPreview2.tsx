@@ -116,7 +116,7 @@ export const PostPreview = ({ postField }: Props) => {
 
         {/* <Link to={postField.frontmatter.slug}> */}
         <div className="px-2">
-          <h2 className="mb-2 border-y-0">{postField.frontmatter.title}</h2>
+          <h2 className="mb-2 border-y-0 font-bold">{postField.frontmatter.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: postField.excerpt ?? '' }} />
           <PostMetaInfo tags={postField.frontmatter.tags ?? []} date={postField.frontmatter.date} />
         </div>

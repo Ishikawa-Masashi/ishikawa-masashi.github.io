@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
     author: 'Masashi Ishikawa',
     // description: "SIer's tech blog powered by Gatsby",
     description: "Masashi's original portfolio site powered by Gastby.",
-    siteUrl: 'https://takumon.com',
+    siteUrl: 'https://ishikawa-masashi.github.io/',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
