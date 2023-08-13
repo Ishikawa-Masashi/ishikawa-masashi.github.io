@@ -17,7 +17,7 @@ export const NoteList = ({ postFields }: Props) => {
 
   return (
     <div className="container mx-auto pt-2">
-      <div className="flex flex-wrap gap-3 pt-6">
+      <div className="flex flex-wrap justify-center gap-3 pt-6">
         {filtered.map((postField) => (
           <NotePreview key={postField.frontmatter.slug} postField={postField} />
         ))}
