@@ -92,7 +92,7 @@ type Props = {
   postField: GatsbyTypes.MarkdownRemark
 }
 
-export const GamePostPreview = ({ postField }: Props) => {
+export const GameArticlePreview = ({ postField }: Props) => {
   return (
     <article className="group max-w-xs rounded-md px-3 py-7 shadow-md" key={postField.frontmatter.slug}>
       <Link to={postField.frontmatter.url as string} className="group">

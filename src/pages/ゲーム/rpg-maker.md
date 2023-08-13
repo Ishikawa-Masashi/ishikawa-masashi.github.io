@@ -1,16 +1,14 @@
 ---
-title: 'AutoHotkey スクロールと修飾キーの組合せが便利'
+title: '自作RPGゲームエンジン'
 date: '2023-04-07T09:00:00.000+09:00'
 category: game
 tags:
-  - キーボード
-  - AutoHotkey
-  - 作業効率化
+  - RPG
 keywords:
-  - キーボード
-slug: /autohotkey-mouse-scroll-combination
-thumbnail: thumbnail/2023/04/autohotkey-mouse-scroll-combination.png
-url: https://takumon.com # WebサイトのURL
+  - RPG
+slug: /rpg-maker
+thumbnail: thumbnail/default.png
+url: 'https://ephemeral-starship-f65b71.netlify.app'
 ---
 
 ## なにこれ
