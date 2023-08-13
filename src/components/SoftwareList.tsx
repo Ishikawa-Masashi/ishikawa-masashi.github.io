@@ -23,7 +23,7 @@ export const SoftwareList = ({ postFields }: Props) => {
           <div className="text-2xl text-blue-600">Game</div>
         </div>
       </div> */}
-      <div className="flex flex-wrap gap-3 pt-6">
+      <div className="flex flex-wrap justify-center gap-3 pt-6">
         {filtered.map((postField) => (
           // <GamePostPreview key={postField.frontmatter.slug} postField={postField} />
           <SoftwareArticlePreview key={postField.frontmatter.slug} postField={postField} />
