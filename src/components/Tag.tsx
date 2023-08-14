@@ -9,9 +9,9 @@ type Props = {
   color?: string
 }
 
-const Tag: React.FC<Props> = ({ value, count, color }) => {
+const Tag = ({ value, count, color }: Props) => {
   return (
-    <div key={value} css={styles.content}>
+    <div key={value} className="font-bold" css={styles.content}>
       <Link to={`/tags/${kebabCase(value)}`} css={styles.link}>
         <div css={styles.tag_name} style={{ color: color }}>
           {value}
