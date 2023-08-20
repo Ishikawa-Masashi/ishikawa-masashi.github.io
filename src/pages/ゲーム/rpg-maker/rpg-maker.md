@@ -39,7 +39,54 @@ Windowsだと`Ctrl`+スクロールは拡大/縮小、`Shift`+スクロールは
 このノリを`Win`,`Alt`,`Tab`にも拡張する感じでAutoHotkeyで設定します。  
 右手でマウススクロールしながら、左手で`Win`,`Alt`,`Tab`を押下することで、目的のデスクトップ・アプリ・タブに素早く直感的に移動できます。
 
-![overview](./overview.png)
+## Tilesheet B: 0 - 255
+
+![overview](./tilesheet-b-numbering-sheet.jpg)
+
+## Tilesheet C: 256 - 511
+
+![overview](./tilesheet-c-numbering-sheet.jpg)
+
+## Tilesheet D: 512 - 767
+
+![overview](./tilesheet-d-numbering-sheet.jpg)
+
+## Tilesheet E: 768 - 1023
+
+![overview](./tilesheet-e-numbering-sheet.jpg)
+
+## Tilesheet A5: 1536 - 1663
+
+![overview](./tilesheet-a5-numbering-sheet.jpg)
+
+## Tilesheet A1: 2048 - 2815
+
+![overview](./tilesheet-a1-numbering-sheet.jpg)
+
+## Tilesheet A2: 2816 - 4351
+
+![overview](./tilesheet-a2-numbering-sheet.jpg)
+
+## Tilesheet A3: 4352 - 5887
+
+![overview](./tilesheet-a3-numbering-sheet.jpg)
+
+## Tilesheet A4: 5888 - 8191
+
+![overview](./tilesheet-a4-numbering-sheet.jpg)
+
+## floor-type-autotile-shapes
+
+![overview](./floor-type-autotile-shapes.jpg)
+
+## wall-type-autotile-shapes
+
+![overview](./wall-type-autotile-shapes.jpg)
+
+## waterfall-type-autotile-shapes
+
+![overview](./waterfall-type-autotile-shapes.jpg)
+
 
 ## 実例紹介：ソースコード
 
