@@ -1,8 +1,15 @@
-# My blog powered by Gatsby
+# Udonのホームページ
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3f8b6dfc-c816-4a99-8bc1-c51c90eba99e/deploy-status)](https://app.netlify.com/sites/modest-morse-7d9755/deploys)
+とりあえずGitHub Pagesで公開する。
 
-- [https://takumon.com/](https://takumon.com/)
-- [Gatsby Showcase](https://www.gatsbyjs.org/showcase/takumon.com)
+https://gitudon.github.io/
 
-![blogimage](./blogimage.png)
+## 予定
+
+- ホームページ
+- ブログ
+- プロジェクト紹介
+
+## 環境
+
+- Astro.js
