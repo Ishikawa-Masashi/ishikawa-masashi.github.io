@@ -2,7 +2,7 @@
 
 とりあえずGitHub Pagesで公開する。
 
-https://gitudon.github.io/
+https://ishikawa-masashi.github.io/
 
 ## 予定
 
