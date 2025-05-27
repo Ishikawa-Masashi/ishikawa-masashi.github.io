@@ -1,0 +1,64 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_URL, GITHUB_URL, EMAIL_ADDRESS } from '../consts';
+---
+
+<!doctype html>
+<html lang="ja">
+	<style>
+		h1{
+			text-align: center;
+		}
+		.title{
+			font-size: 2.5em;
+		}
+		p{
+			margin-bottom: 1em;
+			padding: 0;
+		}
+	</style>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1 class="title">Udonのホームページ</h1>
+			<p>
+			こんにちは。Udonと申します。<br>
+			このページは、私の活動を紹介するために作成されました。
+			</p>
+			<h2>掲載しているもの(予定含む)</h2>
+			<ul>
+				<li><a href="/about">自己紹介</a></li>
+				<li><a href="/blog">ブログ</a></li>
+			</ul>
+			<h2>リンク集</h2>
+			<ul>
+				<li><a href={TWITTER_URL} target="_blank">Twitter(現X)</a></li>
+				<li><a href={GITHUB_URL} target="_blank">GitHub</a></li>
+				<li><a href="https://htn-udon.hatenablog.com/">はてなブログ</a></li>
+				<li><a href="https://qiita.com/Q_udon">Qiita</a></li>
+				<li><a href="https://zenn.dev/z_udon">Zenn</a></li>
+				<li><a href="https://atcoder.jp/users/ccc_udon">AtCoder</a></li>
+				<li><a href="https://www.youtube.com/@udon1197">YouTube</a></li>
+			</ul>
+			<h2>このページの技術スタック</h2>
+			<ul>
+				<li><a href="https://astro.build/" target="_blank">Astro.js</a></li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>TypeScript</li>
+			</ul>
+			<h2>連絡先</h2>
+			<ul>
+				<li><a href={TWITTER_URL} target="_blank">Twitter(現X)-DM</a></li>
+				<li>{EMAIL_ADDRESS}</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
