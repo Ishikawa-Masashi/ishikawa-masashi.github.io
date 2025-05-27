@@ -1,4 +1,4 @@
-# Udonのホームページ
+# Ishikawaのホームページ
 
 とりあえずGitHub Pagesで公開する。
 
