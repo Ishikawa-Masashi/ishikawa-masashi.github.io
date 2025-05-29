@@ -10,7 +10,7 @@ const date = Astro.props.date;
   {
     date.toLocaleDateString("en-us", {
       year: "numeric",
-      month: "numeric",
+      month: "short",
       day: "numeric",
     })
   }
