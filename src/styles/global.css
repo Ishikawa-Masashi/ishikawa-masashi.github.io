@@ -52,11 +52,11 @@ body {
   display: block;
 }
 main {
-  width: 70%;
+  /* width: 70%;
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 2em;
-  display: block;
+  display: block; */
 }
 h1,
 h2,

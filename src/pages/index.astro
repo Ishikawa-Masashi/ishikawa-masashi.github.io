@@ -1,4 +1,6 @@
 ---
+// import "../styles/global.css";
+
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -24,18 +26,18 @@ import {
 
   <body>
     <Header />
-    <main>
+    <main class="container mx-auto px-4 py-8">
       <div class="flex items-center justify-center">
         <img class="w-1/4" src={"/ishikawa.svg"} alt="" />
       </div>
       <h1 class="text-center text-5xl">Ishikawa's Portfolio</h1>
 
-      <h2>掲載しているもの(予定含む)</h2>
-      <ul>
+      <h2 class="text-center">掲載しているもの(予定含む)</h2>
+      <ul class="text-center">
         <li><a href="/about">自己紹介</a></li>
         <li><a href="/blog">ブログ</a></li>
       </ul>
-      <h2>リンク集</h2>
+      <h2 class="text-center">リンク集</h2>
       <!-- <ul>
         <li><a href={TWITTER_URL} target="_blank">Twitter(現X)</a></li>
         <li><a href={GITHUB_URL} target="_blank">GitHub</a></li>
@@ -45,8 +47,8 @@ import {
         <li><a href="https://atcoder.jp/users/ccc_udon">AtCoder</a></li>
         <li><a href="https://www.youtube.com/@udon1197">YouTube</a></li>
       </ul> -->
-      <h2>このページの技術スタック</h2>
-      <ul>
+      <h2 class="text-center">このページの技術スタック</h2>
+      <ul class="text-center">
         <li><a href="https://astro.build/" target="_blank">Astro.js</a></li>
         <li>HTML</li>
         <li>CSS</li>
@@ -54,11 +56,11 @@ import {
         <li>TypeScript</li>
         <li>Tailwind CSS</li>
       </ul>
-      <h2>連絡先</h2>
+      <!-- <h2>連絡先</h2>
       <ul>
-        <li><a href={TWITTER_URL} target="_blank">Twitter(現X)-DM</a></li>
-        <!-- <li>{EMAIL_ADDRESS}</li> -->
-      </ul>
+        <li><a href={TWITTER_URL} target="_blank">Twitter(現X)-DM</a></li> -->
+      <!-- <li>{EMAIL_ADDRESS}</li> -->
+      <!-- </ul> -->
     </main>
     <Footer />
   </body>
