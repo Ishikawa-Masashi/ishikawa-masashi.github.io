@@ -92,13 +92,7 @@ const posts = (await getCollection("tech")).sort(
               <li>
                 <a href={"/tech/" + post.id + "/"}>
                   {post.data.heroImage && (
-                    <img
-                      width={720}
-                      height={360}
-                      class="max-h-64"
-                      src={post.data.heroImage}
-                      alt=""
-                    />
+                    <img class="max-h-64" src={post.data.heroImage} alt="" />
                   )}
                   <h4 class="title">{post.data.title}</h4>
                   <p class="date">
