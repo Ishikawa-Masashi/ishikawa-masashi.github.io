@@ -2,7 +2,7 @@
 title: 'Astro'
 description: 'Astroについて'
 pubDate: 'Dec 27 2024'
-heroImage: '/blog-heroimages/hajime.png'
+heroImage: '/tech-heroimages/astro-logo-light-gradient.svg'
 ---
 
 ## Tips
