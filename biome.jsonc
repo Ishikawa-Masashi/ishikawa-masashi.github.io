@@ -22,6 +22,9 @@
       "recommended": true,
       "style": {
         "useBlockStatements": "error"
+      },
+      "nursery": {
+        "useSortedClasses": "error"
       }
     }
   },
@@ -31,4 +34,3 @@
     }
   }
 }
-

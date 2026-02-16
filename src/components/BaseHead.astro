@@ -13,7 +13,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = "/ishikawa.svg" } = Astro.props;
 ---
-
+<head>
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -36,6 +36,10 @@ const { title, description, image = "/ishikawa.svg" } = Astro.props;
   crossorigin
 />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
@@ -57,3 +61,4 @@ const { title, description, image = "/ishikawa.svg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+</head>
