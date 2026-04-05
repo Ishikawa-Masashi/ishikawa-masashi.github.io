@@ -28,7 +28,7 @@ const tech = defineCollection({
 });
 
 const math = defineCollection({
-	// Load Markdown and MDX files in the `src/content/tech/` directory.
+	// Load Markdown and MDX files in the `src/content/math/` directory.
 	loader: glob({ base: "./src/content/math/", pattern: "*.md" }),
 	// Type-check frontmatter using a schema
 	schema: z.object({
