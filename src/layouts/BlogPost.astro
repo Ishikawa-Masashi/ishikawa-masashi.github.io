@@ -1,5 +1,4 @@
 ---
-
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
@@ -8,71 +7,60 @@ import Header from "../components/Header.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const collection = pathname.startsWith("/tech") ? "tech" : "blog";
+const backHref = `/${collection}`;
+const backLabel = collection === "tech" ? "← プログラミングへ戻る" : "← ブログへ戻る";
+const tag = collection === "tech" ? "Tech" : "日記";
 ---
 
 <html lang="ja">
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .hero-image img {
-        display: block;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
   </head>
-
   <body>
     <Header />
-    <main>
-      <article>
-        <div class="flex items-center justify-center">
-          {
-            heroImage && (
-              <img class="margin-auto w-1/4" src={heroImage} alt="" />
-            )
-          }
-        </div>
-        <div class="prose">
-          <div class="title">
-            <h1>{title}</h1>
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <hr />
+    <main class="pop-main">
+      <article class="sticker rise" style="max-width: 760px; margin: 0 auto; overflow: hidden;">
+
+        <!-- article header -->
+        <div
+          style="background: var(--pop-peri); border-bottom: 3px solid var(--pop-ink); padding: 30px; text-align: center;"
+        >
+          <span class="pop-tag yellow">{tag}</span>
+          <h1 class="pop-h1" style="font-size: clamp(28px,5vw,44px); margin-top: 14px;">{title}</h1>
+          <div style="font-weight: 800; margin-top: 8px;">
+            <FormattedDate date={pubDate} />
+            {updatedDate && (
+              <span style="font-style: italic; font-weight: 700; font-size: 14px; margin-left: 8px;">
+                (更新: <FormattedDate date={updatedDate} />)
+              </span>
+            )}
           </div>
-          <slot />
+          {heroImage && (
+            <div style="margin-top: 22px; display: flex; justify-content: center;">
+              <div
+                style="background: #fff; border: 3px solid var(--pop-ink); border-radius: 20px; padding: 14px; box-shadow: var(--shadow-pop);"
+              >
+                <img
+                  src={heroImage}
+                  alt=""
+                  style="max-width: 280px; max-height: 180px; object-fit: contain; display: block;"
+                />
+              </div>
+            </div>
+          )}
         </div>
+
+        <!-- article body -->
+        <div style="padding: 28px clamp(22px,5vw,44px) 40px; font-weight: 600; font-size: 18px; line-height: 1.9;">
+          <slot />
+          <div style="margin-top: 32px;">
+            <a href={backHref} class="pop-btn peri">{backLabel}</a>
+          </div>
+        </div>
+
       </article>
     </main>
     <Footer />

@@ -1,0 +1,27 @@
+---
+interface Props {
+  size?: number;
+}
+const { size = 260 } = Astro.props;
+const frame = Math.round(size * 1.18);
+---
+
+<div style={`position: relative; width: ${frame}px; height: ${frame}px; flex: none;`}>
+  <div style="position: absolute; inset: -10px; border-radius: 36px; background: radial-gradient(circle at 50% 40%, rgba(35,55,255,.28), transparent 70%); filter: blur(10px);"></div>
+  <div style={`position: absolute; inset: 0; border-radius: 30px; background: linear-gradient(180deg, #bfe6ff 0%, #d9f1ff 46%, #eaf9ff 60%); border: 3.5px solid var(--pop-ink); overflow: hidden; box-shadow: var(--shadow-pop-lg), inset 0 -8px 22px rgba(80,120,90,.18);`}>
+    <!-- sun -->
+    <div style="position: absolute; top: 11%; right: 14%; width: 16%; height: 16%; border-radius: 50%; background: radial-gradient(circle, #ffe97a 0%, #ffd23d 70%, #ffc107 100%); box-shadow: 0 0 14px rgba(255,210,61,.8); z-index: 1;"></div>
+    <!-- clouds -->
+    <div style="position: absolute; top: 18%; left: 10%; width: 30%; height: 10%; border-radius: 999px; background: #ffffff; opacity: .92; z-index: 1;"></div>
+    <div style="position: absolute; top: 28%; left: 42%; width: 22%; height: 8%; border-radius: 999px; background: #ffffff; opacity: .8; z-index: 1;"></div>
+    <!-- hills -->
+    <div style="position: absolute; bottom: 22%; left: -14%; width: 72%; height: 40%; border-radius: 50%; background: #8fd17a; z-index: 1;"></div>
+    <div style="position: absolute; bottom: 22%; right: -18%; width: 80%; height: 46%; border-radius: 50%; background: #7ac46a; z-index: 1;"></div>
+    <!-- ground -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 26%; background: linear-gradient(180deg, #6fbf5e, #57a84a); z-index: 1;"></div>
+    <!-- mascot -->
+    <div style="position: absolute; left: 50%; bottom: 12%; transform: translateX(-50%); width: 60%; z-index: 2;">
+      <img class="float" src="/ishikawa.svg" alt="Ishikawa mascot" style="width: 100%; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); display: block;" />
+    </div>
+  </div>
+</div>

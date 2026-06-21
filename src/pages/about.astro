@@ -1,52 +1,71 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MascotHero from "../components/MascotHero.astro";
+
+const hobbies = [
+  "プログラミング・開発",
+  "競技プログラミング (AtCoder)",
+  "自作キーボード",
+  "マイクラ",
+  "東方",
+  "音ゲー (maimai)",
+  "ウルトラマン",
+  "仮面ライダー",
+];
+const langs = ["HTML/CSS", "Python", "C", "C++", "TypeScript", "JavaScript"];
 ---
 
-<Layout
-  title="About Me"
-  description="About Ishikawa"
-  pubDate={new Date("2024-12-27")}
-  heroImage="/ishikawa.svg"
->
-  <h2>自己紹介</h2>
-  <p>
-    <b>Ishikawa</b>と申します。<br />
-    プログラミングが好きなので、色々作ったりしています。<br />
-    どうぞよろしくお願いします。
-  </p>
-  <!-- <h2>資格</h2>
-  <ul>
-    <li>基本情報技術者試験：2024-05</li>
-  </ul>
-  <h2>扱える言語</h2>
-  <p>
-    ※<a href="https://github.com/Gitudon" target="_blank">ここ</a
-    >も参照してください。
-  </p>
-  <ul>
-    <li>HTML/CSS</li>
-    <li>Python</li>
-    <li>C</li>
-    <li>C++</li>
-    <li>TypeScript</li>
-    <li>JavaScript</li>
-  </ul>
-  <h2>趣味</h2>
-  <ul>
-    <li>プログラミング・開発</li>
-    <li>ゲーム</li>
-    <ul>
-      <li>マイクラ</li>
-      <li>東方</li>
-      <li>音ゲー(maimai)</li>
-    </ul>
-    <li>映画鑑賞</li>
-    <li>特撮</li>
-    <ul>
-      <li>ウルトラマン</li>
-      <li>仮面ライダー</li>
-      <li>スーパー戦隊</li>
-    </ul>
-    <li>カラオケ</li>
-  </ul> -->
-</Layout>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <BaseHead title="About — Ishikawa" description="Ishikawa の自己紹介" />
+  </head>
+  <body>
+    <Header />
+    <main class="pop-main">
+
+      <!-- intro -->
+      <section
+        class="rise"
+        style="display: flex; gap: 30px; flex-wrap: wrap; align-items: center; justify-content: center;"
+      >
+        <MascotHero size={240} />
+        <div class="sticker" style="flex: 1 1 320px; min-width: 300px; padding: 26px 28px;">
+          <span class="pop-eyebrow">About me</span>
+          <h1 class="pop-h1" style="font-size: clamp(28px,5vw,46px); margin-top: 8px;">自己紹介</h1>
+          <p style="font-weight: 700; font-size: 18px; line-height: 1.9; margin-top: 14px; margin-bottom: 0;">
+            <b>Ishikawa</b> と申します。<br />
+            プログラミングが好きなので、色々作ったりしています。<br />
+            どうぞよろしくお願いします！
+          </p>
+        </div>
+      </section>
+
+      <!-- details -->
+      <section
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 30px;"
+      >
+        <div class="sticker rise" style="padding: 24px 26px;">
+          <h2 class="pop-h2" style="font-size: 24px;">趣味</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+            {hobbies.map((h, i) => (
+              <span class="pop-tag" style={`background: ${i % 3 === 0 ? "var(--pop-peri)" : "#fff"};`}>{h}</span>
+            ))}
+          </div>
+        </div>
+        <div class="sticker rise" style="padding: 24px 26px; background: var(--pop-yellow);">
+          <h2 class="pop-h2" style="font-size: 24px;">扱える言語</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+            {langs.map((l) => (
+              <span class="pop-tag" style="background: #fff;">{l}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <Footer />
+  </body>
+</html>
