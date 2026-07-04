@@ -30,7 +30,7 @@ const tech = defineCollection({
 // 参考書ごとの解説記事。`src/content/math/<参考書スラッグ>/<記事>.md` に置く。
 // `_` で始まるファイル（参考書メタの `_book.md`）は記事から除外する。
 const math = defineCollection({
-	loader: glob({ base: "./src/content/math/", pattern: "**/[!_]*.md" }),
+	loader: glob({ base: "./src/content/math/", pattern: ["**/*.md", "!**/_book.md"] }),
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
