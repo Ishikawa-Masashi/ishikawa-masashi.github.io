@@ -10,6 +10,11 @@ permissions:
   pages: write
   id-token: write
 
+# 同時に走るデプロイを直列化し、ラン同士のアーティファクト競合を防ぐ
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
