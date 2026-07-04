@@ -9,10 +9,26 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 const pathname = Astro.url.pathname;
-const collection = pathname.startsWith("/tech") ? "tech" : "blog";
-const backHref = `/${collection}`;
-const backLabel = collection === "tech" ? "← プログラミングへ戻る" : "← ブログへ戻る";
-const tag = collection === "tech" ? "Tech" : "日記";
+const segments = pathname.split("/").filter(Boolean); // 例: ["math", "book-slug", "article"]
+
+let backHref: string;
+let backLabel: string;
+let tag: string;
+
+if (pathname.startsWith("/math")) {
+  // 数学記事は所属する参考書ページへ戻す
+  backHref = `/math/${segments[1]}`;
+  backLabel = "← 参考書へ戻る";
+  tag = "数学";
+} else if (pathname.startsWith("/tech")) {
+  backHref = "/tech";
+  backLabel = "← プログラミングへ戻る";
+  tag = "Tech";
+} else {
+  backHref = "/blog";
+  backLabel = "← ブログへ戻る";
+  tag = "日記";
+}
 ---
 
 <html lang="ja">

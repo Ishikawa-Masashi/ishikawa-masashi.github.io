@@ -2,6 +2,9 @@
 title: "線形代数 - 部分空間と基底"
 description: "R^3の部分空間であることの証明と基底の求め方"
 pubDate: 2026-04-05
+chapter: 1
+chapterTitle: "ベクトル空間"
+section: 1
 ---
 
 ## 問題

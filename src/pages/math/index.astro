@@ -1,10 +1,130 @@
 ---
 import { getCollection } from "astro:content";
-import PostList from "../../layouts/PostList.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-const posts = (await getCollection("math")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+// 参考書スラッグ = `_book.md` の id から末尾の `/_book` を除いたもの
+const bookSlug = (id: string) => id.replace(/\/_book$/, "");
+
+const books = (await getCollection("mathBooks")).sort(
+    (a, b) => a.data.order - b.data.order,
+);
+const articles = await getCollection("math");
+
+// 各参考書の記事数
+const countByBook = new Map<string, number>();
+for (const a of articles) {
+    const slug = a.id.split("/")[0];
+    countByBook.set(slug, (countByBook.get(slug) ?? 0) + 1);
+}
+
+// 分野ごとに参考書をグルーピング（books は order 順にソート済みなので各分野内も order 順）
+const booksByField = new Map<string, typeof books>();
+for (const book of books) {
+    const field = book.data.field;
+    if (!booksByField.has(field)) booksByField.set(field, []);
+    booksByField.get(field)!.push(book);
+}
+
+// 分野の表示順 = その分野に含まれる本の最小 order（＝先頭の本の order）
+const fields = [...booksByField.entries()].sort(
+    (a, b) => a[1][0].data.order - b[1][0].data.order,
 );
 ---
 
-<PostList posts={posts} basePath="math" />
+<!doctype html>
+<html lang="ja">
+    <head>
+        <BaseHead
+            title={`数学 — ${SITE_TITLE}`}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body>
+        <Header />
+        <main class="pop-main">
+            <!-- page header -->
+            <header
+                class="rise"
+                style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 34px;"
+            >
+                <img
+                    src="/ishikawa.svg"
+                    alt=""
+                    class="float"
+                    style="width: 76px; height: 76px;"
+                />
+                <div>
+                    <span class="pop-eyebrow">Math</span>
+                    <h1 class="pop-h1"><span class="hl">数学</span></h1>
+                    <p style="font-weight: 700; margin-top: 6px;">
+                        参考書ごとの解説ノート
+                    </p>
+                </div>
+            </header>
+
+            <!-- 分野ごとのセクション -->
+            {
+                fields.map(([field, fieldBooks]) => (
+                    <section style="margin-bottom: 44px;">
+                        <h2
+                            class="pop-h2 rise"
+                            style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;"
+                        >
+                            <span class="hl">{field}</span>
+                            <span style="font-size: 15px; font-weight: 700; color: var(--pop-peri-deep);">
+                                {fieldBooks.length} 冊
+                            </span>
+                        </h2>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+                            {fieldBooks.map((book, i) => {
+                                const slug = bookSlug(book.id);
+                                return (
+                                    <a
+                                        href={`/math/${slug}/`}
+                                        class="sticker wobble rise"
+                                        style={`display: block; text-decoration: none; color: var(--pop-ink); overflow: hidden; animation-delay: ${i * 0.06}s;`}
+                                    >
+                                        <div style="background: var(--pop-peri); border-bottom: 3px solid var(--pop-ink); padding: 18px; display: flex; align-items: center; justify-content: center; height: 180px;">
+                                            {book.data.coverImage ? (
+                                                <img
+                                                    src={book.data.coverImage}
+                                                    alt={`${book.data.title}の表紙`}
+                                                    style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(2px 3px 0 rgba(21,19,31,.25));"
+                                                />
+                                            ) : (
+                                                <span style="font-family: var(--font-pop); font-weight: 900; font-size: 40px; opacity: .55;">
+                                                    📘
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div style="padding: 16px 20px 20px;">
+                                            <span
+                                                class="pop-tag yellow"
+                                                style="font-size: 12px; padding: 3px 11px;"
+                                            >
+                                                {countByBook.get(slug) ?? 0} 記事
+                                            </span>
+                                            <h3 style="font-family: var(--font-pop); font-weight: 900; font-size: 21px; margin: 12px 0 6px;">
+                                                {book.data.title}
+                                            </h3>
+                                            {book.data.author && (
+                                                <div style="font-weight: 700; color: var(--pop-peri-deep);">
+                                                    {book.data.author}
+                                                    {book.data.publisher && ` / ${book.data.publisher}`}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    </section>
+                ))
+            }
+        </main>
+        <Footer />
+    </body>
+</html>
