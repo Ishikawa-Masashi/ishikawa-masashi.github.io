@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 160 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g>
+        <path d="M35,112L107,112" style="fill:none;fill-rule:nonzero;"/>
+        <path d="M99.122,108.25L104.747,112L99.122,115.75" style="fill:none;fill-rule:nonzero;stroke:rgb(232,80,107);stroke-width:2.5px;"/>
+        <path d="M35,112L104.747,112" style="fill:none;fill-rule:nonzero;stroke:rgb(232,80,107);stroke-width:2.5px;stroke-miterlimit:4;"/>
+    </g>
+    <g>
+        <path d="M107,112L71,49" style="fill:none;fill-rule:nonzero;"/>
+        <path d="M71.653,57.701L72.118,50.957L78.165,53.98" style="fill:none;fill-rule:nonzero;stroke:rgb(58,141,255);stroke-width:2.5px;"/>
+        <path d="M107,112C107,112 78.197,61.595 72.118,50.957" style="fill:none;fill-rule:nonzero;stroke:rgb(58,141,255);stroke-width:2.5px;stroke-miterlimit:4;"/>
+    </g>
+    <g>
+        <path d="M71,49L35,112" style="fill:none;fill-rule:nonzero;"/>
+        <path d="M42.165,107.02L36.118,110.043L35.653,103.299" style="fill:none;fill-rule:nonzero;stroke:rgb(58,179,113);stroke-width:2.5px;"/>
+        <path d="M71,49C71,49 42.197,99.405 36.118,110.043" style="fill:none;fill-rule:nonzero;stroke:rgb(58,179,113);stroke-width:2.5px;stroke-miterlimit:4;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,71,128)">
+        <text x="-8.665px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(232,80,107);">BL</text>
+    </g>
+    <g transform="matrix(1,0,0,1,100,82)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(58,141,255);">CM</text>
+    </g>
+    <g transform="matrix(1,0,0,1,42,82)">
+        <text x="-18.776px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(58,179,113);">AN</text>
+    </g>
+</svg>

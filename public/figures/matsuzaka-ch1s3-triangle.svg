@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 360 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <path d="M180,40L60,250L300,250L180,40Z" style="fill:none;fill-rule:nonzero;stroke:rgb(21,19,31);stroke-width:2.5px;"/>
+    <circle cx="180" cy="40" r="4" style="fill:rgb(21,19,31);"/>
+    <circle cx="60" cy="250" r="4" style="fill:rgb(21,19,31);"/>
+    <circle cx="300" cy="250" r="4" style="fill:rgb(21,19,31);"/>
+    <circle cx="180" cy="250" r="4.5" style="fill:rgb(232,80,107);"/>
+    <circle cx="240" cy="145" r="4.5" style="fill:rgb(232,80,107);"/>
+    <circle cx="120" cy="145" r="4.5" style="fill:rgb(232,80,107);"/>
+    <g transform="matrix(1,0,0,1,180,28)">
+        <text x="-6.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;">A</text>
+    </g>
+    <g transform="matrix(1,0,0,1,44,264)">
+        <text x="-6.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;">B</text>
+    </g>
+    <g transform="matrix(1,0,0,1,316,264)">
+        <text x="-6.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;">C</text>
+    </g>
+    <g transform="matrix(1,0,0,1,180,277)">
+        <text x="-4.887px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(232,80,107);">L</text>
+    </g>
+    <g transform="matrix(1,0,0,1,261,140)">
+        <text x="-6.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(232,80,107);">M</text>
+    </g>
+    <g transform="matrix(1,0,0,1,99,140)">
+        <text x="-5.777px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(232,80,107);">N</text>
+    </g>
+</svg>

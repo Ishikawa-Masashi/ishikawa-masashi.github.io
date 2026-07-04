@@ -308,3 +308,16 @@ hr { border: none; border-top: 3px solid var(--pop-ink); margin: 24px 0; }
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* 記事本文 */
+.pop-article-body {
+  padding: 28px clamp(22px, 5vw, 44px) 40px;
+  font-size: 18px;
+  line-height: 1.9;
+  font-weight: 600;
+}
+/* 数学(解答)記事は地の文を KaTeX と同じ書体にして、文章と数式の見た目を揃える */
+.pop-article-body.is-math {
+  font-family: KaTeX_Main, "Times New Roman", serif;
+  font-weight: 400;
+}

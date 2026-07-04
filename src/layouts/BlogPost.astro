@@ -10,6 +10,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const segments = pathname.split("/").filter(Boolean); // 例: ["math", "book-slug", "article"]
+const isMath = pathname.startsWith("/math");
 
 let backHref: string;
 let backLabel: string;
@@ -70,7 +71,7 @@ if (pathname.startsWith("/math")) {
         </div>
 
         <!-- article body -->
-        <div style="padding: 28px clamp(22px,5vw,44px) 40px; font-weight: 600; font-size: 18px; line-height: 1.9;">
+        <div class:list={["pop-article-body", { "is-math": isMath }]}>
           <slot />
           <div style="margin-top: 32px;">
             <a href={backHref} class="pop-btn peri">{backLabel}</a>
