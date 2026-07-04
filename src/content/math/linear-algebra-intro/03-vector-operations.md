@@ -90,25 +90,40 @@ $$
 
 ## 4. 三角不等式
 
-### $|a+b|\le|a|+|b|$
+### $|a+b|\le|a|+|b|$（第 11 図(b)）
 
-$a=\overrightarrow{OA},\ b=\overrightarrow{AB}$（$b$ の始点を $a$ の終点に置く）とすると $a+b=\overrightarrow{OB}$。三角形 $OAB$ において「1 辺は他の 2 辺の和以下」だから
+第 11 図(b) のように点 $A, B, C$ をとり
 $$
-|\overrightarrow{OB}|\le|\overrightarrow{OA}|+|\overrightarrow{AB}|
+a=\overrightarrow{AB},\qquad b=\overrightarrow{BC},\qquad a+b=\overrightarrow{AC}
+$$
+とする。三角形 $ABC$ では 1 辺の長さは他の 2 辺の長さの和を超えないから
+$$
+|\overrightarrow{AC}|\le|\overrightarrow{AB}|+|\overrightarrow{BC}|
 \;\Longrightarrow\;
 |a+b|\le|a|+|b|
 $$
 
-等号が成り立つのは $O, A, B$ が一直線上、すなわち $a, b$ が同じ向きのときである。
+等号が成り立つのは $A, B, C$ が一直線上に並ぶとき、すなわち $a, b$ が同じ向きのときである。
 
-### $|a-b|\le|a|+|b|$
+### $|a-b|\le|a|+|b|$（第 12 図）
 
-上の不等式で $b$ を $-b$ に置き換える。$|-b|=|b|$ だから
+第 12 図のように点 $O, A, B$ をとり
 $$
-|a+(-b)|\le|a|+|-b|=|a|+|b|
+a=\overrightarrow{OA},\qquad b=\overrightarrow{OB}
+$$
+とすると
+$$
+a-b=\overrightarrow{OA}-\overrightarrow{OB}=\overrightarrow{BA}
+$$
+
+三角形 $OAB$ では辺 $BA$ の長さは他の 2 辺の長さの和を超えないから
+$$
+|\overrightarrow{BA}|\le|\overrightarrow{OA}|+|\overrightarrow{OB}|
 \;\Longrightarrow\;
 |a-b|\le|a|+|b|\qquad\blacksquare
 $$
+
+等号が成り立つのは $O, A, B$ が一直線上に並ぶとき、すなわち $a, b$ が反対向きのときである。
 
 ---
 
