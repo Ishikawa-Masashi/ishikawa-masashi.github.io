@@ -1,10 +1,10 @@
 ---
-title: "ベクトルの演算 - 演習問題"
-description: "中点・分点の位置ベクトル表示と三角不等式の証明（§3 ベクトルの演算）"
+title: "§3 演習問題 — 中点・分点と三角不等式"
+description: "第1章 §3 の演習。中点・分点の位置ベクトル表示と三角不等式の証明。"
 pubDate: 2026-07-04
-chapter: 2
-chapterTitle: "ベクトルの演算"
-section: 1
+chapter: 1
+chapterTitle: "平面および空間のベクトル"
+section: 3
 ---
 
 各点の位置ベクトルを $A, B, C, \dots$ と書き、$\overrightarrow{PQ} = Q - P$ を用いる。
