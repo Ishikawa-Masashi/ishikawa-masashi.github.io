@@ -116,6 +116,16 @@ const fields = [...booksByField.entries()].sort(
                                                     {book.data.publisher && ` / ${book.data.publisher}`}
                                                 </div>
                                             )}
+                                            {book.data.series && (
+                                                <div style="font-size: 12px; font-weight: 700; color: var(--pop-peri-deep); margin-top: 2px;">
+                                                    {book.data.series}
+                                                </div>
+                                            )}
+                                            {book.data.isbn && (
+                                                <div style="font-size: 12px; font-weight: 700; color: var(--pop-peri-deep); margin-top: 2px;">
+                                                    ISBN: {book.data.isbn}
+                                                </div>
+                                            )}
                                         </div>
                                     </a>
                                 );

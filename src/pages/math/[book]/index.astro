@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 }
 
 const { book, chapters } = Astro.props;
-const { title, author, publisher, description } = book.data;
+const { title, author, publisher, series, isbn, description } = book.data;
 ---
 
 <!doctype html>
@@ -67,6 +67,20 @@ const { title, author, publisher, description } = book.data;
                             {author}
                             {author && publisher && " / "}
                             {publisher}
+                        </p>
+                    )
+                }
+                {
+                    series && (
+                        <p style="font-weight: 700; font-size: 14px; color: var(--pop-peri-deep); margin-top: 4px;">
+                            {series}
+                        </p>
+                    )
+                }
+                {
+                    isbn && (
+                        <p style="font-weight: 700; font-size: 13px; color: var(--pop-peri-deep); margin-top: 4px;">
+                            ISBN: {isbn}
                         </p>
                     )
                 }

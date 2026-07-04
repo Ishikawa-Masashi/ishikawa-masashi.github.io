@@ -54,6 +54,10 @@ const mathBooks = defineCollection({
 		title: z.string(),
 		author: z.string().optional(),
 		publisher: z.string().optional(),
+		// シリーズ名（例: "松坂和夫 数学入門シリーズ 2"）
+		series: z.string().optional(),
+		// ISBN（ISBN-13 を推奨）
+		isbn: z.string().optional(),
 		description: z.string().optional(),
 		// 分野（例: "線形代数", "解析学", "確率・統計"）。未指定は「その他」に分類。
 		field: z.string().default("その他"),
