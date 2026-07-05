@@ -15,10 +15,14 @@ const { posts, basePath } = Astro.props;
 
 const meta: Record<string, { title: string; sub: string; tag: string }> = {
   blog: { title: "ブログ", sub: "Diary", tag: "日記" },
-  tech: { title: "プログラミング", sub: "Tech notes", tag: "Tech" },
+  tech: { title: "ものづくり", sub: "Tech", tag: "ものづくり" },
   math: { title: "数学", sub: "Math", tag: "数学" },
 };
 const { title, sub, tag } = meta[basePath] ?? { title: basePath, sub: "", tag: basePath };
+
+// カードのタグ: 記事に genre があればそれを、なければコレクションの tag を使う
+const cardTagOf = (post: CollectionEntry<"blog" | "tech" | "math">) =>
+  "genre" in post.data && post.data.genre ? post.data.genre : tag;
 ---
 
 <!doctype html>
@@ -62,7 +66,7 @@ const { title, sub, tag } = meta[basePath] ?? { title: basePath, sub: "", tag: b
               )}
             </div>
             <div style="padding: 16px 20px 20px;">
-              <span class="pop-tag yellow" style="font-size: 12px; padding: 3px 11px;">{tag}</span>
+              <span class="pop-tag yellow" style="font-size: 12px; padding: 3px 11px;">{cardTagOf(post)}</span>
               <h3 style="font-family: var(--font-pop); font-weight: 900; font-size: 21px; margin: 12px 0 6px;">
                 {post.data.title}
               </h3>

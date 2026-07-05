@@ -2,6 +2,7 @@
 title: 'Astro'
 description: 'Astroについて'
 pubDate: 'Dec 27 2024'
+genre: 'プログラミング'
 heroImage: '/tech-heroimages/astro-logo-dark.svg'
 ---
 

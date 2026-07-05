@@ -2,6 +2,7 @@
 title: 'キーボード'
 description: '日記'
 pubDate: 'Mar 9 2025'
+genre: '自作キーボード'
 heroImage: '/tech-heroimages/keyboard.png'
 ---
 

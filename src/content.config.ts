@@ -22,6 +22,8 @@ const tech = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		pubDate: z.coerce.date(),
+		// ジャンル（例: "プログラミング", "3DCG", "自作キーボード"）。カードのタグに表示。
+		genre: z.string().optional(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 	}),

@@ -2,6 +2,7 @@
 title: 'Blender'
 description: 'Blenderについて'
 pubDate: 'Mar 9 2025'
+genre: '3DCG'
 heroImage: '/tech-heroimages/blender_logo.svg'
 ---
 

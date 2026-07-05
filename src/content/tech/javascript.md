@@ -2,6 +2,7 @@
 title: 'Javascript'
 description: 'Astroについて'
 pubDate: 'Dec 27 2024'
+genre: 'プログラミング'
 heroImage: '/tech-heroimages/Unofficial_JavaScript_logo_2.svg'
 ---
 
