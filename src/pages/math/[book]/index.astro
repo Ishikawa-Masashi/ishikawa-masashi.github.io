@@ -114,12 +114,14 @@ const { title, author, publisher, series, isbn, description } = book.data;
                                     style={`display: block; text-decoration: none; color: var(--pop-ink); overflow: hidden; animation-delay: ${i * 0.06}s;`}
                                 >
                                     <div style="padding: 16px 20px 20px;">
-                                        <span
-                                            class="pop-tag yellow"
-                                            style="font-size: 12px; padding: 3px 11px;"
-                                        >
-                                            {ch.chapter}.{post.data.section}
-                                        </span>
+                                        {post.data.sectionLabel && (
+                                            <span
+                                                class="pop-tag yellow"
+                                                style="font-size: 12px; padding: 3px 11px;"
+                                            >
+                                                {post.data.sectionLabel}
+                                            </span>
+                                        )}
                                         <h3 style="font-family: var(--font-pop); font-weight: 900; font-size: 21px; margin: 12px 0 6px;">
                                             {post.data.title}
                                         </h3>

@@ -5,6 +5,7 @@ pubDate: 2026-07-04
 chapter: 1
 chapterTitle: "平面および空間のベクトル"
 section: 4
+sectionLabel: "§4"
 ---
 
 内積は $\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\cos\theta$、成分では $(a_1,a_2)\cdot(b_1,b_2)=a_1b_1+a_2b_2$ を用いる。2 つのベクトルが直交することは内積が $0$ になることと同値である。

@@ -42,8 +42,10 @@ const math = defineCollection({
 		chapter: z.number().default(1),
 		// 章タイトル（例: "ベクトル空間"）。同じ章の記事は同じ値にする。見出しに使用。
 		chapterTitle: z.string().optional(),
-		// 章の中での節番号。並び順に使う。小さいほど先。
+		// 章の中での並び順。小さいほど先（表示には使わない）。
 		section: z.number().default(1),
+		// カードに表示する節ラベル（例: "§3"）。節番号のない本では省略するとタグ非表示。
+		sectionLabel: z.string().optional(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 	}),

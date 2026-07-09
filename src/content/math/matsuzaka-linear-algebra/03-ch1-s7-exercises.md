@@ -5,6 +5,7 @@ pubDate: 2026-07-05
 chapter: 1
 chapterTitle: "平面および空間のベクトル"
 section: 7
+sectionLabel: "§7"
 ---
 
 直線 $ax+by+c=0$ の**法線ベクトル**は $(a,b)$（$a,b,c$ はスカラーの係数）、媒介変数表示 $x=x_0+\alpha t,\ y=y_0+\beta t$ の**方向ベクトル**は $(\alpha,\beta)$ である。

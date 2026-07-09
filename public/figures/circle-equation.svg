@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" role="img" aria-label="点A(a,b)を中心とする半径rの円と円上の点P(x,y)" font-family="'M PLUS Rounded 1c', sans-serif">
+  <defs>
+    <marker id="ce-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#15131f" />
+    </marker>
+  </defs>
+  <line x1="28" y1="205" x2="288" y2="205" stroke="#15131f" stroke-width="1.5" marker-end="url(#ce-ar)" />
+  <line x1="55" y1="235" x2="55" y2="20" stroke="#15131f" stroke-width="1.5" marker-end="url(#ce-ar)" />
+  <text x="290" y="209" font-size="15" font-style="italic">x</text>
+  <text x="49" y="18" font-size="15" font-style="italic">y</text>
+  <text x="42" y="220" font-size="14">O</text>
+  <circle cx="168" cy="118" r="62" fill="none" stroke="#15131f" stroke-width="2" />
+  <circle cx="168" cy="118" r="3.5" fill="#e8506b" />
+  <circle cx="204" cy="67" r="3.5" fill="#3a8dff" />
+  <line x1="168" y1="118" x2="204" y2="67" stroke="#3a8dff" stroke-width="2" />
+  <text x="181" y="86" font-size="15" font-style="italic" fill="#3a8dff">r</text>
+  <text x="150" y="137" font-size="14" font-style="italic">A(a, b)</text>
+  <text x="210" y="62" font-size="14" font-style="italic">P(x, y)</text>
+</svg>

@@ -5,6 +5,7 @@ pubDate: 2026-07-04
 chapter: 1
 chapterTitle: "平面および空間のベクトル"
 section: 3
+sectionLabel: "§3"
 ---
 
 各点の位置ベクトルを $A, B, C, \dots$ と書き、$\overrightarrow{PQ}=Q-P$ を用いる。
