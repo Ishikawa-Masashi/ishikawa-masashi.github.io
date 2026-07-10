@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" role="img" aria-label="第12図 a=OA, b=OB, a-b=BA の三角形" font-family="'M PLUS Rounded 1c', sans-serif">
+  <defs>
+    <marker id="d-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8506b" /></marker>
+    <marker id="d-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3a8dff" /></marker>
+    <marker id="d-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3ab371" /></marker>
+  </defs>
+  <line x1="40" y1="180" x2="208" y2="59" stroke="#e8506b" stroke-width="2.5" marker-end="url(#d-a)" />
+  <line x1="40" y1="180" x2="151" y2="180" stroke="#3a8dff" stroke-width="2.5" marker-end="url(#d-b)" />
+  <line x1="155" y1="180" x2="209" y2="59" stroke="#3ab371" stroke-width="2.5" marker-end="url(#d-r)" />
+  <circle cx="40" cy="180" r="3" fill="#15131f" />
+  <circle cx="212" cy="55" r="3" fill="#15131f" />
+  <circle cx="155" cy="180" r="3" fill="#15131f" />
+  <text x="28" y="194" font-size="14" font-style="italic">O</text>
+  <text x="216" y="52" font-size="14" font-style="italic">A</text>
+  <text x="150" y="196" font-size="14" font-style="italic">B</text>
+  <text x="95" y="108" font-size="15" font-weight="700" font-style="italic" fill="#e8506b">a</text>
+  <text x="92" y="198" font-size="15" font-weight="700" font-style="italic" fill="#3a8dff">b</text>
+  <text x="190" y="120" font-size="15" font-weight="700" font-style="italic" fill="#3ab371">a-b</text>
+</svg>

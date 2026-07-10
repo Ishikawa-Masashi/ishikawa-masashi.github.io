@@ -11,7 +11,8 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    // minRuleThickness で分数の横線・√の線を太くする（既定は約 0.04em で細い）
+    rehypePlugins: [[rehypeKatex, { minRuleThickness: 0.09 }]],
   },
   vite: {
     plugins: [tailwindcss()],

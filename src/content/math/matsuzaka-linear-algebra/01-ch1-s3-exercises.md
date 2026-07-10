@@ -14,7 +14,11 @@ sectionLabel: "§3"
 
 ## 1. 中点と等式の証明
 
-三角形 $ABC$ の辺 $BC, CA, AB$ の中点をそれぞれ $L, M, N$ とすると
+**問題** 三角形 $ABC$ の辺 $BC, CA, AB$ の中点をそれぞれ $L, M, N$ とするとき、次の等式を証明せよ。
+(a) $\overrightarrow{BN}+\overrightarrow{CM}=\overrightarrow{LA}$
+(b) $\overrightarrow{BL}+\overrightarrow{CM}+\overrightarrow{AN}=\vec{0}$
+
+**解答** 中点の位置ベクトルは
 $$
 L=\frac{B+C}{2},\quad M=\frac{C+A}{2},\quad N=\frac{A+B}{2}
 $$
@@ -63,7 +67,9 @@ $$
 
 ## 2. $\overrightarrow{AL},\ \overrightarrow{BM},\ \overrightarrow{CN}$ を $\boldsymbol{a},\boldsymbol{b}$ で表す
 
-原点を $A$ にとり $\overrightarrow{AB}=\boldsymbol{a},\ \overrightarrow{AC}=\boldsymbol{b}$ とする。このとき $B=\boldsymbol{a},\ C=\boldsymbol{b}$ であり
+**問題** 前問で $\overrightarrow{AB}=\boldsymbol{a},\ \overrightarrow{AC}=\boldsymbol{b}$ として、$\overrightarrow{AL},\ \overrightarrow{BM},\ \overrightarrow{CN}$ を $\boldsymbol{a},\boldsymbol{b}$ で表せ。
+
+**解答** 原点を $A$ にとると $B=\boldsymbol{a},\ C=\boldsymbol{b}$ であり
 $$
 L=\frac{\boldsymbol{a}+\boldsymbol{b}}{2},\quad M=\frac{\boldsymbol{b}}{2},\quad N=\frac{\boldsymbol{a}}{2}
 $$
@@ -82,7 +88,9 @@ $$
 
 ## 3. 平行四辺形 $ABCD$
 
-対角線について
+**問題** 平行四辺形 $ABCD$ において、$\overrightarrow{AC}=\boldsymbol{a},\ \overrightarrow{BD}=\boldsymbol{b}$ として、$\overrightarrow{AB},\ \overrightarrow{AD}$ を $\boldsymbol{a},\boldsymbol{b}$ で表せ。
+
+**解答** 対角線について
 $$
 \overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}=\boldsymbol{a},\qquad
 \overrightarrow{BD}=\overrightarrow{AD}-\overrightarrow{AB}=\boldsymbol{b}
@@ -103,7 +111,16 @@ $$
 
 ## 4. 三角不等式
 
+**問題** 第 11 図(b)、第 12 図を用いて、$|\boldsymbol{a}+\boldsymbol{b}|\le|\boldsymbol{a}|+|\boldsymbol{b}|$、$|\boldsymbol{a}-\boldsymbol{b}|\le|\boldsymbol{a}|+|\boldsymbol{b}|$ を証明せよ。
+
+**解答**
+
 ### $|\boldsymbol{a}+\boldsymbol{b}|\le|\boldsymbol{a}|+|\boldsymbol{b}|$（第 11 図(b)）
+
+<figure style="text-align: center; margin: 18px 0;">
+<img src="/figures/matsuzaka-ch1s3-triangle-ineq-sum.svg" alt="第11図(b) a=AB, b=BC, a+b=AC の三角形" style="display: block; margin: 0 auto; max-width: 260px; width: 100%; height: auto;" />
+<figcaption style="font-size: 14px; color: #555; margin-top: 6px;">第 11 図(b)　a=AB, b=BC, a+b=AC</figcaption>
+</figure>
 
 第 11 図(b) のように点 $A, B, C$ をとり
 $$
@@ -119,6 +136,11 @@ $$
 等号が成り立つのは $A, B, C$ が一直線上に並ぶとき、すなわち $\boldsymbol{a}, \boldsymbol{b}$ が同じ向きのときである。
 
 ### $|\boldsymbol{a}-\boldsymbol{b}|\le|\boldsymbol{a}|+|\boldsymbol{b}|$（第 12 図）
+
+<figure style="text-align: center; margin: 18px 0;">
+<img src="/figures/matsuzaka-ch1s3-triangle-ineq-diff.svg" alt="第12図 a=OA, b=OB, a-b=BA の三角形" style="display: block; margin: 0 auto; max-width: 260px; width: 100%; height: auto;" />
+<figcaption style="font-size: 14px; color: #555; margin-top: 6px;">第 12 図　a=OA, b=OB, a−b=BA</figcaption>
+</figure>
 
 第 12 図のように点 $O, A, B$ をとり
 $$
@@ -142,7 +164,9 @@ $$
 
 ## 5. 辺 $BC$ の 3 等分点 $D, E$
 
-$B\to C$ の向きに $B, D, E, C$ と並ぶ。原点を $A$ にとると
+**問題** 三角形 $ABC$ の辺 $BC$ を 3 等分する点を $D, E$ とするとき、$\overrightarrow{AD},\ \overrightarrow{AE}$ をそれぞれ $\overrightarrow{AB},\ \overrightarrow{AC}$ で表せ。また $\overrightarrow{AD}+\overrightarrow{AE}=\overrightarrow{AB}+\overrightarrow{AC}$ であることを証明せよ。
+
+**解答** $B\to C$ の向きに $B, D, E, C$ と並ぶ。原点を $A$ にとると
 $$
 D=\frac{2}{3}B+\frac{1}{3}C,\qquad E=\frac{1}{3}B+\frac{2}{3}C
 $$
@@ -162,6 +186,9 @@ $$
 
 ## 6. 四辺形 $ABCD$ の辺 $AD, BC$ の中点 $M, N$
 
+**問題** 四辺形 $ABCD$ の辺 $AD, BC$ の中点をそれぞれ $M, N$ とするとき、$\overrightarrow{MN}$ を $\overrightarrow{AB},\ \overrightarrow{DC}$ で表せ。
+
+**解答**
 $$
 M=\frac{A+D}{2},\qquad N=\frac{B+C}{2}
 $$
@@ -176,6 +203,9 @@ $$
 
 ## 7. 3 等分点 $M_1, M_2$（辺 $AD$）、$N_1, N_2$（辺 $BC$）
 
+**問題** 前問で辺 $AD$ を 3 等分する点を $M_1, M_2$、辺 $BC$ を 3 等分する点を $N_1, N_2$ とすれば、$\overrightarrow{M_1N_1}+\overrightarrow{M_2N_2}=\overrightarrow{AB}+\overrightarrow{DC}$ であることを証明せよ。
+
+**解答**
 $$
 M_1=\frac{2}{3}A+\frac{1}{3}D,\quad M_2=\frac{1}{3}A+\frac{2}{3}D
 $$
