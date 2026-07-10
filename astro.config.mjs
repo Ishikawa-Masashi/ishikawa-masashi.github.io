@@ -4,15 +4,15 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
+import rehypeMathjax from 'rehype-mathjax';
 // https://astro.build/config
 export default defineConfig({
   site: "https://ishikawa-masashi.github.io",
   integrations: [mdx(), sitemap()],
   markdown: {
     remarkPlugins: [remarkMath],
-    // minRuleThickness で分数の横線・√の線を太くする（既定は約 0.04em で細い）
-    rehypePlugins: [[rehypeKatex, { minRuleThickness: 0.09 }]],
+    // MathJax(SVG) でビルド時に数式を描画。TeX 純正フォントで本に近い矢印になる。
+    rehypePlugins: [rehypeMathjax],
   },
   vite: {
     plugins: [tailwindcss()],

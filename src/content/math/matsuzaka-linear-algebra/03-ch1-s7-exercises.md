@@ -25,7 +25,7 @@ $$
 
 **直交** $\iff$ 方向 $(\alpha,\beta)$ が法線 $(a,b)$ に平行:
 $$
-\alpha b-\beta a=0\qquad(\text{すなわち }\alpha:\beta=a:b)
+\alpha b-\beta a=0\qquad(\alpha:\beta=a:b)
 $$
 
 ---
@@ -66,9 +66,7 @@ $$
 となり、(1.17) 上の点はすべて (1.23) を満たす。
 
 逆に、$\boldsymbol{a}\ne\boldsymbol{b}$ なので $\boldsymbol{a}-\boldsymbol{b}\ne\boldsymbol{0}$、よって (1.23) は原点を通る 1 本の直線を表す。(1.17) も原点を通り方向ベクトル $\boldsymbol{a}+\boldsymbol{b}$ の直線で、その方向は上の計算により (1.23) 上にある。原点を通る直線は 1 つの方向で定まるから、両者は同一の直線である。
-$$
-\therefore\ (1.17)\text{ と }(1.23)\text{ は同じ直線を表す}\qquad\blacksquare
-$$
+よって $(1.17)$ と $(1.23)$ は同じ直線を表す。$\blacksquare$
 
 核心は $(\boldsymbol{a}-\boldsymbol{b})\cdot(\boldsymbol{a}+\boldsymbol{b})=|\boldsymbol{a}|^2-|\boldsymbol{b}|^2$ が $|\boldsymbol{a}|=|\boldsymbol{b}|$ のとき $0$ になること。幾何的には「2等分線の方向 $\boldsymbol{a}+\boldsymbol{b}$ が法線 $\boldsymbol{a}-\boldsymbol{b}$ と直交する」ことを表す。
 

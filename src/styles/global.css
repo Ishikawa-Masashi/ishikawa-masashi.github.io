@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "katex/dist/katex.min.css";
 
 :root {
   --pop-ink: #15131f;
@@ -316,8 +315,23 @@ hr { border: none; border-top: 3px solid var(--pop-ink); margin: 24px 0; }
   line-height: 1.9;
   font-weight: 600;
 }
-/* 数学(解答)記事は地の文を KaTeX と同じ書体にして、文章と数式の見た目を揃える */
+/* 数学(解答)記事は地の文をセリフ体にして、MathJax の数式と雰囲気を揃える */
 .pop-article-body.is-math {
-  font-family: KaTeX_Main, "Times New Roman", serif;
+  font-family: "Times New Roman", "Noto Serif JP", serif;
   font-weight: 400;
+}
+
+/* MathJax (SVG) コンテナの表示。別行立て数式($$)はブロック中央、はみ出しは横スクロール */
+mjx-container[jax="SVG"] {
+  display: inline-block;
+}
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
