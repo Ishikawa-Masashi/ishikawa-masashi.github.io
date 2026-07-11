@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --pop-ink: #15131f;
   --pop-bg: #ececfb;
@@ -34,6 +32,8 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; }
+/* 旧 Tailwind Preflight 由来の svg 既定を明示。mjx-container の svg は下で inline-block に上書きする */
+svg { display: block; }
 
 body {
   background-color: var(--pop-bg);

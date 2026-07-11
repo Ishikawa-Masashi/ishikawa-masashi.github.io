@@ -1,7 +1,6 @@
 // @ts-check
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import remarkMath from 'remark-math';
 import rehypeMathjax from 'rehype-mathjax';
@@ -15,7 +14,6 @@ export default defineConfig({
     rehypePlugins: [rehypeMathjax],
   },
   vite: {
-    plugins: [tailwindcss()],
     server: {
       watch: {
         usePolling: true,
