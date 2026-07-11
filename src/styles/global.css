@@ -292,6 +292,42 @@ hr { border: none; border-top: 3px solid var(--pop-ink); margin: 24px 0; }
 @media (max-width: 720px) {
   body { font-size: 16px; }
   .pop-social { display: none; }
+
+  /* compact header on phones */
+  .pop-nav { gap: 10px; padding: 8px 14px; }
+  .pop-wordmark { font-size: 15px; gap: 8px; }
+  .pop-wordmark img { width: 28px; height: 28px; padding: 3px; }
+  .pop-navlinks { gap: 6px; }
+  .pop-navlink { font-size: 13px; padding: 5px 11px; border-width: 2px; }
+}
+
+@media (max-width: 480px) {
+  /* one slim row: fixed wordmark + horizontally-scrolling links */
+  .pop-nav {
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 5px 10px;
+  }
+  .pop-wordmark {
+    flex-shrink: 0;
+    gap: 0;
+  }
+  /* icon only on phones — hide the site-name text to free up width */
+  .pop-wordmark span:last-child { display: none; }
+  .pop-wordmark img { width: 26px; height: 26px; padding: 2px; border-width: 2px; }
+  .pop-wordmark .mark-wrap::after { width: 7px; height: 7px; }
+  .pop-navlinks {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 5px;
+  }
+  .pop-navlinks::-webkit-scrollbar { display: none; }
+  .pop-navlink { flex: 0 0 auto; font-size: 12.5px; padding: 4px 10px; }
 }
 
 .sr-only {
@@ -322,10 +358,15 @@ hr { border: none; border-top: 3px solid var(--pop-ink); margin: 24px 0; }
 }
 
 /* MathJax (SVG) コンテナの表示。別行立て数式($$)はブロック中央、はみ出しは横スクロール */
+/* line-height:0 が重要（無いとインライン数式がずれる／行送りが不均一になる） */
 mjx-container[jax="SVG"] {
   display: inline-block;
+  line-height: 0;
 }
 mjx-container[jax="SVG"] > svg {
+  /* Tailwind Preflight の svg{display:block} を打ち消す（無いとインライン数式が
+     ブロック化して上にずれ、行送りも不自然になる）。SVG の vertical-align が効く */
+  display: inline-block;
   overflow: visible;
 }
 mjx-container[jax="SVG"][display="true"] {
