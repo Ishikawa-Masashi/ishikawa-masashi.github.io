@@ -78,7 +78,7 @@ const fields = [...booksByField.entries()].sort(
                                 {fieldBooks.length} 冊
                             </span>
                         </h2>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 440px)); gap: 20px; justify-content: start;">
                             {fieldBooks.map((book, i) => {
                                 const slug = bookSlug(book.id);
                                 return (
@@ -114,12 +114,12 @@ const fields = [...booksByField.entries()].sort(
                                                 </div>
                                             )}
                                         </div>
-                                        <div style="background: var(--pop-peri); border-left: 3px solid var(--pop-ink); padding: 6px; display: flex; align-items: center; justify-content: center; width: 104px; flex-shrink: 0;">
+                                        <div style="padding: 10px; display: flex; align-items: center; justify-content: center; width: 108px; flex-shrink: 0;">
                                             {book.data.coverImage ? (
                                                 <img
                                                     src={book.data.coverImage}
                                                     alt={`${book.data.title}の表紙`}
-                                                    style="width: 100%; height: 100%; object-fit: contain; display: block;"
+                                                    style="width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 2px 5px rgba(21,19,31,.28)) drop-shadow(0 0 1px rgba(21,19,31,.35));"
                                                 />
                                             ) : (
                                                 <span style="font-family: var(--font-pop); font-weight: 900; font-size: 40px; opacity: .55;">
