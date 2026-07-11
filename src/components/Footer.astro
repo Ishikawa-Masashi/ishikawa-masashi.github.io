@@ -1,17 +1,11 @@
 ---
 const today = new Date();
-const NAV = [
-  { href: "/", label: "Top" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/tech", label: "Tech" },
-];
 ---
 
 <footer style="border-top: 3px solid var(--pop-ink); background: var(--pop-peri); margin-top: 40px;">
   <div
     class="pop-main"
-    style="padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;"
+    style="padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;"
   >
     <div style="display: flex; align-items: center; gap: 14px;">
       <img src="/ishikawa.svg" alt="" style="width: 44px; height: 44px;" />
@@ -19,9 +13,6 @@ const NAV = [
         © {today.getFullYear()} Made by Ishikawa<br />
         <span style="font-weight: 700; font-size: 13px; opacity: .7;">All rights reserved.</span>
       </div>
-    </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-      {NAV.map((l) => <a href={l.href} class="pop-navlink">{l.label}</a>)}
     </div>
   </div>
 </footer>
