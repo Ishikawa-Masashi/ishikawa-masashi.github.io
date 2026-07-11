@@ -326,6 +326,8 @@ hr { border: none; border-top: 3px solid var(--pop-ink); margin: 24px 0; }
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     gap: 5px;
+    /* overflow-x:auto は縦方向もクリップするため、ボタンの影ぶんの余白を確保 */
+    padding: 4px 6px 7px;
   }
   .pop-navlinks::-webkit-scrollbar { display: none; }
   .pop-navlink { flex: 0 0 auto; font-size: 12.5px; padding: 4px 10px; }
